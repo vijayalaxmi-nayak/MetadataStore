@@ -1403,3 +1403,1334 @@ succeeds before bundling.
 
 In Gemfile:
   mysql2[0m
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 14:35:20 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [09349578] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [09349578] Command: [ -d ~/.rvm ]
+ DEBUG [09349578] Finished in 3.549 seconds with exit status 0 (successful).
+ DEBUG [20a627b2] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [20a627b2] Command: ~/.rvm/bin/rvm version
+ DEBUG [20a627b2] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [20a627b2] Finished in 0.946 seconds with exit status 0 (successful).
+ DEBUG [83b9a22b] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [83b9a22b] Command: ~/.rvm/bin/rvm current
+ DEBUG [83b9a22b] 	ruby-2.3.8
+ DEBUG [83b9a22b] Finished in 0.938 seconds with exit status 0 (successful).
+ DEBUG [7b4f0895] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [7b4f0895] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [7b4f0895] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [7b4f0895] Finished in 1.084 seconds with exit status 0 (successful).
+  INFO [59263d4e] Running /usr/bin/env mkdir -p /tmp on 3.135.201.144
+ DEBUG [59263d4e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [59263d4e] Finished in 0.754 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 100.0%
+  INFO [a7d3d4f6] Running /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh on 3.135.201.144
+ DEBUG [a7d3d4f6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh
+  INFO [a7d3d4f6] Finished in 0.769 seconds with exit status 0 (successful).
+  INFO [8278b563] Running /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD on 3.135.201.144
+ DEBUG [8278b563] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD )
+ DEBUG [8278b563] 	f2e4f14afb3ba79df2c3c93c06f3a4de61cdd7db	HEAD
+  INFO [8278b563] Finished in 0.640 seconds with exit status 0 (successful).
+  INFO [4e129f30] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases on 3.135.201.144
+ DEBUG [4e129f30] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases
+  INFO [4e129f30] Finished in 0.492 seconds with exit status 0 (successful).
+  INFO [cb345e56] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared/public/assets on 3.135.201.144
+ DEBUG [cb345e56] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared/public/assets
+  INFO [cb345e56] Finished in 0.774 seconds with exit status 0 (successful).
+ DEBUG [3facb52d] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ] on 3.135.201.144
+ DEBUG [3facb52d] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ]
+ DEBUG [3facb52d] Finished in 0.776 seconds with exit status 0 (successful).
+ DEBUG [d4931e4a] Running [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ] on 3.135.201.144
+ DEBUG [d4931e4a] Command: [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ]
+ DEBUG [d4931e4a] Finished in 0.775 seconds with exit status 1 (failed).
+ DEBUG [ebc29450] Running [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ] on 3.135.201.144
+ DEBUG [ebc29450] Command: [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ]
+ DEBUG [ebc29450] Finished in 0.773 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/metadata_store_application/repo
+ DEBUG [07b9b158] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [07b9b158] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [07b9b158] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [434fcff3] Running /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore on 3.135.201.144
+ DEBUG [434fcff3] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore )
+  INFO [434fcff3] Finished in 0.779 seconds with exit status 0 (successful).
+  INFO [8dab5ac3] Running /usr/bin/env git remote update --prune on 3.135.201.144
+ DEBUG [8dab5ac3] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8dab5ac3] 	Fetching origin
+ DEBUG [8dab5ac3] 	remote: Enumerating objects: 11, done.[K
+remote: Counting objects:   9% (1/11)[Kremote: Counting objects:  18% (2/11)[Kremote: Counting objects:  27% (3/11)[Kremote: Counting objects:  36% (4/11)[Kremote: Counting objects:  45% (5/11)[Kremote: Counting objects:  54% (6/11)[Kremote: Counting objects:  63% (7/11)[Kremote: Counting objects:  72% (8/11)[Kremote: Counting objects:  81% (9/11)[Kremote: Counting objects:  90% (10/11)[Kremote: Counting objects: 100% (11/11)[Kremote: Counting objects: 100% (11/11), done.[K
+ DEBUG [8dab5ac3] 	remote: Compressing objects:  50% (1/2)[Kremote: Compressing objects: 100% (2/2)[Kremote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [8dab5ac3] 	Unpacking objects:  16% (1/6)   
+ DEBUG [8dab5ac3] 	Unpacking objects:  33% (2/6)   
+ DEBUG [8dab5ac3] 	Unpacking objects:  50% (3/6)   
+ DEBUG [8dab5ac3] 	Unpacking objects:  66% (4/6)   
+ DEBUG [8dab5ac3] 	Unpacking objects:  83% (5/6)   
+ DEBUG [8dab5ac3] 	remote: Total 6 (delta 4), reused 6 (delta 4), pack-reused 0
+ DEBUG [8dab5ac3] 	Unpacking objects: 100% (6/6)   Unpacking objects: 100% (6/6), done.
+ DEBUG [8dab5ac3] 	From https://github.com/vijayalaxmi-nayak/MetadataStore
+   7afd837..7ffd6e9  vn_deployment -> vn_deployment
+  INFO [8dab5ac3] Finished in 1.024 seconds with exit status 0 (successful).
+ DEBUG [01d77876] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [01d77876] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [01d77876] Finished in 0.486 seconds with exit status 0 (successful).
+  INFO [3b359801] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306090539 on 3.135.201.144
+ DEBUG [3b359801] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306090539 )
+  INFO [3b359801] Finished in 0.780 seconds with exit status 0 (successful).
+  INFO [b69e39fa] Running /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306090539 on 3.135.201.144
+ DEBUG [b69e39fa] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306090539 )
+  INFO [b69e39fa] Finished in 0.952 seconds with exit status 0 (successful).
+ DEBUG [b23137f1] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [b23137f1] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [b23137f1] Finished in 0.480 seconds with exit status 0 (successful).
+ DEBUG [b6ac9cbf] Running /usr/bin/env git rev-list --max-count=1 vn_deployment on 3.135.201.144
+ DEBUG [b6ac9cbf] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git rev-list --max-count=1 vn_deployment )
+ DEBUG [b6ac9cbf] 	7ffd6e904183343fff755ab0724e52e40b632e3b
+ DEBUG [b6ac9cbf] Finished in 0.750 seconds with exit status 0 (successful).
+ DEBUG [da53f825] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306090539; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306090539'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [da53f825] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306090539; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306090539'" 1>&2; false; fi
+ DEBUG [da53f825] Finished in 0.480 seconds with exit status 0 (successful).
+  INFO [d91d69e2] Running /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION on 3.135.201.144
+ DEBUG [d91d69e2] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306090539 && /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION
+  INFO [d91d69e2] Finished in 0.765 seconds with exit status 0 (successful).
+  INFO [6981e577] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306090539/public on 3.135.201.144
+ DEBUG [6981e577] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306090539/public
+  INFO [6981e577] Finished in 0.754 seconds with exit status 0 (successful).
+ DEBUG [f5ba3e1f] Running [ -L /home/ubuntu/apps/metadata_store_application/releases/20200306090539/public/assets ] on 3.135.201.144
+ DEBUG [f5ba3e1f] Command: [ -L /home/ubuntu/apps/metadata_store_application/releases/20200306090539/public/assets ]
+ DEBUG [f5ba3e1f] Finished in 0.744 seconds with exit status 1 (failed).
+ DEBUG [ee844756] Running [ -d /home/ubuntu/apps/metadata_store_application/releases/20200306090539/public/assets ] on 3.135.201.144
+ DEBUG [ee844756] Command: [ -d /home/ubuntu/apps/metadata_store_application/releases/20200306090539/public/assets ]
+ DEBUG [ee844756] Finished in 0.752 seconds with exit status 1 (failed).
+  INFO [363913a9] Running /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/shared/public/assets /home/ubuntu/apps/metadata_store_application/releases/20200306090539/public/assets on 3.135.201.144
+ DEBUG [363913a9] Command: /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/shared/public/assets /home/ubuntu/apps/metadata_store_application/releases/20200306090539/public/assets
+  INFO [363913a9] Finished in 0.750 seconds with exit status 0 (successful).
+ DEBUG [57afd594] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306090539; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306090539'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [57afd594] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306090539; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306090539'" 1>&2; false; fi
+ DEBUG [57afd594] Finished in 0.739 seconds with exit status 0 (successful).
+ DEBUG [0509b351] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle on 3.135.201.144
+ DEBUG [0509b351] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306090539 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle
+ DEBUG [0509b351] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306090539/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [0509b351] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [0509b351] 	[31mThe following gems are missing[0m
+[31m * net-ssh (5.2.0)[0m
+ DEBUG [0509b351] 	[31m * net-scp (2.0.0)[0m
+ DEBUG [0509b351] 	[31m * sshkit (1.21.0)[0m
+ DEBUG [0509b351] 	[31m * airbrussh (1.4.0)[0m
+ DEBUG [0509b351] 	[31m * byebug (11.0.1)[0m
+ DEBUG [0509b351] 	[31m * capistrano (3.12.0)[0m
+ DEBUG [0509b351] 	[31m * capistrano-bundler (1.6.0)[0m
+ DEBUG [0509b351] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [0509b351] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [0509b351] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [0509b351] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [0509b351] 	[31m * factory_bot (5.1.1)[0m
+ DEBUG [0509b351] 	[31m * factory_bot_rails (5.1.1)[0m
+ DEBUG [0509b351] 	[31m * ffi (1.12.2)[0m
+ DEBUG [0509b351] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [0509b351] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [0509b351] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [0509b351] 	[31m * listen (3.1.5)[0m
+ DEBUG [0509b351] 	[31m * mysql2 (0.5.3)[0m
+ DEBUG [0509b351] 	[31m * rspec-support (3.9.2)[0m
+ DEBUG [0509b351] 	[31m * rspec-core (3.9.1)[0m
+ DEBUG [0509b351] 	[31m * rspec-expectations (3.9.0)[0m
+ DEBUG [0509b351] 	[31m * rspec-mocks (3.9.1)[0m
+ DEBUG [0509b351] 	[31m * rspec-rails (3.9.0)[0m
+ DEBUG [0509b351] 	[31m * spring (2.0.2)[0m
+ DEBUG [0509b351] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [0509b351] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [0509b351] Finished in 1.402 seconds with exit status 1 (failed).
+  INFO [ffd415c6] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet on 3.135.201.144
+ DEBUG [ffd415c6] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306090539 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [ffd415c6] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306090539/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [ffd415c6] 	[31mGem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+current directory:
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/mysql2-0.5.3/ext/mysql2
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/ruby -r
+./siteconf20200306-19393-1sas9xt.rb extconf.rb
+checking for rb_absint_size()... yes
+checking for rb_absint_singlebit_p()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for main() in -lmysqlclient... no
+-----
+mysql client is missing. You may need to 'sudo apt-get install libmariadb-dev',
+'sudo apt-get install libmysqlclient-dev' or 'sudo yum install mysql-devel', and
+try again.
+-----
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+ DEBUG [ffd415c6] 	
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+ DEBUG [ffd415c6] 		--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/$(RUBY_BASE_NAME)
+	--with-mysql-dir
+ DEBUG [ffd415c6] 	
+	--without-mysql-dir
+	
+ DEBUG [ffd415c6] 	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+ DEBUG [ffd415c6] 	
+	--with-mysql-lib
+	
+ DEBUG [ffd415c6] 	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+ DEBUG [ffd415c6] 	
+	--without-mysql-config
+ DEBUG [ffd415c6] 		--with-mysql-dir
+	
+ DEBUG [ffd415c6] 	--without-mysql-dir
+	--with-mysql-include
+ DEBUG [ffd415c6] 		--without-mysql-include=${mysql-dir}/include
+	
+ DEBUG [ffd415c6] 	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+ DEBUG [ffd415c6] 	
+	--with-mysqlclientlib
+	
+ DEBUG [ffd415c6] 	--without-mysqlclientlib
+
+ DEBUG [ffd415c6] 	To see why this extension failed to compile, please check the mkmf.log which can
+be found here:
+
+ DEBUG [ffd415c6] 	/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/mysql2-0.5.3/mkmf.log
+
+extconf failed, exit code 1
+ DEBUG [ffd415c6] 	
+
+Gem files will remain installed in
+ DEBUG [ffd415c6] 	/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/mysql2-0.5.3
+for inspection.
+ DEBUG [ffd415c6] 	Results logged to
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/mysql2-0.5.3/gem_make.out
+ DEBUG [ffd415c6] 	
+
+An error occurred while installing mysql2 (0.5.3), and Bundler cannot continue.
+ DEBUG [ffd415c6] 	Make sure that `gem install mysql2 -v '0.5.3' --source 'https://rubygems.org/'`
+succeeds before bundling.
+ DEBUG [ffd415c6] 	
+ DEBUG [ffd415c6] 	In Gemfile:
+  mysql2[0m
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 14:41:32 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [341af1fa] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [341af1fa] Command: [ -d ~/.rvm ]
+ DEBUG [341af1fa] Finished in 3.526 seconds with exit status 0 (successful).
+ DEBUG [3f33aaa4] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [3f33aaa4] Command: ~/.rvm/bin/rvm version
+ DEBUG [3f33aaa4] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [3f33aaa4] Finished in 0.953 seconds with exit status 0 (successful).
+ DEBUG [23332d64] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [23332d64] Command: ~/.rvm/bin/rvm current
+ DEBUG [23332d64] 	ruby-2.3.8
+ DEBUG [23332d64] Finished in 0.957 seconds with exit status 0 (successful).
+ DEBUG [1c298b63] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [1c298b63] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [1c298b63] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [1c298b63] Finished in 1.092 seconds with exit status 0 (successful).
+  INFO [3370e037] Running /usr/bin/env mkdir -p /tmp on 3.135.201.144
+ DEBUG [3370e037] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3370e037] Finished in 0.762 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 100.0%
+  INFO [5a0e21c9] Running /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh on 3.135.201.144
+ DEBUG [5a0e21c9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh
+  INFO [5a0e21c9] Finished in 0.759 seconds with exit status 0 (successful).
+  INFO [ceeabc1c] Running /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD on 3.135.201.144
+ DEBUG [ceeabc1c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD )
+ DEBUG [ceeabc1c] 	f2e4f14afb3ba79df2c3c93c06f3a4de61cdd7db	HEAD
+  INFO [ceeabc1c] Finished in 0.632 seconds with exit status 0 (successful).
+  INFO [bd53384a] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases on 3.135.201.144
+ DEBUG [bd53384a] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases
+  INFO [bd53384a] Finished in 0.493 seconds with exit status 0 (successful).
+  INFO [917f7ca5] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared/public/assets on 3.135.201.144
+ DEBUG [917f7ca5] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared/public/assets
+  INFO [917f7ca5] Finished in 0.770 seconds with exit status 0 (successful).
+ DEBUG [1c353858] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ] on 3.135.201.144
+ DEBUG [1c353858] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ]
+ DEBUG [1c353858] Finished in 0.770 seconds with exit status 0 (successful).
+ DEBUG [1fbbbca1] Running [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ] on 3.135.201.144
+ DEBUG [1fbbbca1] Command: [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ]
+ DEBUG [1fbbbca1] Finished in 0.773 seconds with exit status 1 (failed).
+ DEBUG [2745f5c5] Running [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ] on 3.135.201.144
+ DEBUG [2745f5c5] Command: [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ]
+ DEBUG [2745f5c5] Finished in 0.770 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/metadata_store_application/repo
+ DEBUG [a97166fa] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [a97166fa] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [a97166fa] Finished in 0.470 seconds with exit status 0 (successful).
+  INFO [fde2ae22] Running /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore on 3.135.201.144
+ DEBUG [fde2ae22] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore )
+  INFO [fde2ae22] Finished in 0.747 seconds with exit status 0 (successful).
+  INFO [539c26b7] Running /usr/bin/env git remote update --prune on 3.135.201.144
+ DEBUG [539c26b7] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [539c26b7] 	Fetching origin
+  INFO [539c26b7] Finished in 0.914 seconds with exit status 0 (successful).
+ DEBUG [526316f3] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [526316f3] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [526316f3] Finished in 0.489 seconds with exit status 0 (successful).
+  INFO [ace47eb0] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091151 on 3.135.201.144
+ DEBUG [ace47eb0] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091151 )
+  INFO [ace47eb0] Finished in 0.779 seconds with exit status 0 (successful).
+  INFO [1ad889ca] Running /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306091151 on 3.135.201.144
+ DEBUG [1ad889ca] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306091151 )
+  INFO [1ad889ca] Finished in 0.961 seconds with exit status 0 (successful).
+ DEBUG [c544b613] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [c544b613] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [c544b613] Finished in 0.492 seconds with exit status 0 (successful).
+ DEBUG [aec2e90a] Running /usr/bin/env git rev-list --max-count=1 vn_deployment on 3.135.201.144
+ DEBUG [aec2e90a] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git rev-list --max-count=1 vn_deployment )
+ DEBUG [aec2e90a] 	7ffd6e904183343fff755ab0724e52e40b632e3b
+ DEBUG [aec2e90a] Finished in 0.780 seconds with exit status 0 (successful).
+ DEBUG [a13205b6] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091151; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091151'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [a13205b6] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091151; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091151'" 1>&2; false; fi
+ DEBUG [a13205b6] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [65a2019c] Running /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION on 3.135.201.144
+ DEBUG [65a2019c] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306091151 && /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION
+  INFO [65a2019c] Finished in 0.779 seconds with exit status 0 (successful).
+  INFO [91936565] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091151/public on 3.135.201.144
+ DEBUG [91936565] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091151/public
+  INFO [91936565] Finished in 0.775 seconds with exit status 0 (successful).
+ DEBUG [17b41dac] Running [ -L /home/ubuntu/apps/metadata_store_application/releases/20200306091151/public/assets ] on 3.135.201.144
+ DEBUG [17b41dac] Command: [ -L /home/ubuntu/apps/metadata_store_application/releases/20200306091151/public/assets ]
+ DEBUG [17b41dac] Finished in 0.777 seconds with exit status 1 (failed).
+ DEBUG [5354282e] Running [ -d /home/ubuntu/apps/metadata_store_application/releases/20200306091151/public/assets ] on 3.135.201.144
+ DEBUG [5354282e] Command: [ -d /home/ubuntu/apps/metadata_store_application/releases/20200306091151/public/assets ]
+ DEBUG [5354282e] Finished in 0.775 seconds with exit status 1 (failed).
+  INFO [0633395a] Running /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/shared/public/assets /home/ubuntu/apps/metadata_store_application/releases/20200306091151/public/assets on 3.135.201.144
+ DEBUG [0633395a] Command: /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/shared/public/assets /home/ubuntu/apps/metadata_store_application/releases/20200306091151/public/assets
+  INFO [0633395a] Finished in 0.778 seconds with exit status 0 (successful).
+ DEBUG [48b02a02] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091151; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091151'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [48b02a02] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091151; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091151'" 1>&2; false; fi
+ DEBUG [48b02a02] Finished in 0.775 seconds with exit status 0 (successful).
+ DEBUG [0dff94ba] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle on 3.135.201.144
+ DEBUG [0dff94ba] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306091151 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle
+ DEBUG [0dff94ba] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306091151/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [0dff94ba] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [0dff94ba] 	[31mThe following gems are missing[0m
+[31m * net-ssh (5.2.0)[0m
+ DEBUG [0dff94ba] 	[31m * net-scp (2.0.0)[0m
+ DEBUG [0dff94ba] 	[31m * sshkit (1.21.0)[0m
+ DEBUG [0dff94ba] 	[31m * airbrussh (1.4.0)[0m
+ DEBUG [0dff94ba] 	
+ DEBUG [0dff94ba] 	[31m * byebug (11.0.1)[0m
+ DEBUG [0dff94ba] 	[31m * capistrano (3.12.0)[0m
+ DEBUG [0dff94ba] 	[31m * capistrano-bundler (1.6.0)[0m
+ DEBUG [0dff94ba] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [0dff94ba] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [0dff94ba] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [0dff94ba] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [0dff94ba] 	[31m * factory_bot (5.1.1)[0m
+ DEBUG [0dff94ba] 	[31m * factory_bot_rails (5.1.1)[0m
+ DEBUG [0dff94ba] 	[31m * ffi (1.12.2)[0m
+ DEBUG [0dff94ba] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [0dff94ba] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [0dff94ba] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [0dff94ba] 	[31m * listen (3.1.5)[0m
+ DEBUG [0dff94ba] 	[31m * mysql2 (0.5.3)[0m
+ DEBUG [0dff94ba] 	[31m * rspec-support (3.9.2)[0m
+ DEBUG [0dff94ba] 	[31m * rspec-core (3.9.1)[0m
+ DEBUG [0dff94ba] 	[31m * rspec-expectations (3.9.0)[0m
+ DEBUG [0dff94ba] 	[31m * rspec-mocks (3.9.1)[0m
+ DEBUG [0dff94ba] 	[31m * rspec-rails (3.9.0)[0m
+ DEBUG [0dff94ba] 	[31m * spring (2.0.2)[0m
+ DEBUG [0dff94ba] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [0dff94ba] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [0dff94ba] Finished in 1.635 seconds with exit status 1 (failed).
+  INFO [f017e788] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet on 3.135.201.144
+ DEBUG [f017e788] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306091151 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [f017e788] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306091151/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [f017e788] 	[31mGem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+current directory:
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/mysql2-0.5.3/ext/mysql2
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/ruby -r
+./siteconf20200306-20994-dmvtg4.rb extconf.rb
+checking for rb_absint_size()... yes
+checking for rb_absint_singlebit_p()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for main() in -lmysqlclient... no
+-----
+mysql client is missing. You may need to 'sudo apt-get install libmariadb-dev',
+'sudo apt-get install libmysqlclient-dev' or 'sudo yum install mysql-devel', and
+try again.
+-----
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+ DEBUG [f017e788] 	need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	
+ DEBUG [f017e788] 	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+ DEBUG [f017e788] 		--ruby=/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/$(RUBY_BASE_NAME)
+	--with-mysql-dir
+ DEBUG [f017e788] 	
+	--without-mysql-dir
+ DEBUG [f017e788] 		--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+ DEBUG [f017e788] 	
+	--with-mysql-lib
+ DEBUG [f017e788] 		--without-mysql-lib=${mysql-dir}/lib
+ DEBUG [f017e788] 		--with-mysql-config
+ DEBUG [f017e788] 		--without-mysql-config
+ DEBUG [f017e788] 		--with-mysql-dir
+	
+ DEBUG [f017e788] 	--without-mysql-dir
+ DEBUG [f017e788] 		--with-mysql-include
+	
+ DEBUG [f017e788] 	--without-mysql-include=${mysql-dir}/include
+	
+ DEBUG [f017e788] 	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+ DEBUG [f017e788] 	
+	--with-mysqlclientlib
+ DEBUG [f017e788] 		--without-mysqlclientlib
+
+To see why this extension failed to compile, please check the mkmf.log which can
+be found here:
+
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/mysql2-0.5.3/mkmf.log
+
+extconf failed, exit code 1
+
+Gem files will remain installed in
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/mysql2-0.5.3
+for inspection.
+Results logged to
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/mysql2-0.5.3/gem_make.out
+
+An error occurred while installing mysql2 (0.5.3), and Bundler cannot continue.
+Make sure that `gem install mysql2 -v '0.5.3' --source 'https://rubygems.org/'`
+ DEBUG [f017e788] 	succeeds before bundling.
+
+In Gemfile:
+  mysql2[0m
+ DEBUG [f017e788] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 14:43:55 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0a138322] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [0a138322] Command: [ -d ~/.rvm ]
+ DEBUG [0a138322] Finished in 3.832 seconds with exit status 0 (successful).
+ DEBUG [efcc81a4] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [efcc81a4] Command: ~/.rvm/bin/rvm version
+ DEBUG [efcc81a4] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [efcc81a4] Finished in 1.032 seconds with exit status 0 (successful).
+ DEBUG [c79b8e06] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [c79b8e06] Command: ~/.rvm/bin/rvm current
+ DEBUG [c79b8e06] 	ruby-2.3.8
+ DEBUG [c79b8e06] Finished in 1.026 seconds with exit status 0 (successful).
+ DEBUG [96909a2e] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [96909a2e] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [96909a2e] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [96909a2e] Finished in 1.169 seconds with exit status 0 (successful).
+  INFO [4741d301] Running /usr/bin/env mkdir -p /tmp on 3.135.201.144
+ DEBUG [4741d301] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4741d301] Finished in 0.827 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 100.0%
+  INFO [b3f0de73] Running /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh on 3.135.201.144
+ DEBUG [b3f0de73] Command: /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh
+  INFO [b3f0de73] Finished in 0.843 seconds with exit status 0 (successful).
+  INFO [483a1c57] Running /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD on 3.135.201.144
+ DEBUG [483a1c57] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD )
+ DEBUG [483a1c57] 	f2e4f14afb3ba79df2c3c93c06f3a4de61cdd7db	HEAD
+  INFO [483a1c57] Finished in 0.682 seconds with exit status 0 (successful).
+  INFO [8fc0bf9a] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases on 3.135.201.144
+ DEBUG [8fc0bf9a] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases
+  INFO [8fc0bf9a] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO [2911f834] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared/public/assets on 3.135.201.144
+ DEBUG [2911f834] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared/public/assets
+  INFO [2911f834] Finished in 0.851 seconds with exit status 0 (successful).
+ DEBUG [1aa6448d] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ] on 3.135.201.144
+ DEBUG [1aa6448d] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ]
+ DEBUG [1aa6448d] Finished in 0.845 seconds with exit status 0 (successful).
+ DEBUG [ac7870f2] Running [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ] on 3.135.201.144
+ DEBUG [ac7870f2] Command: [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ]
+ DEBUG [ac7870f2] Finished in 0.838 seconds with exit status 1 (failed).
+ DEBUG [63de7e17] Running [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ] on 3.135.201.144
+ DEBUG [63de7e17] Command: [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ]
+ DEBUG [63de7e17] Finished in 0.832 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/metadata_store_application/repo
+ DEBUG [4f78b34f] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [4f78b34f] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [4f78b34f] Finished in 0.530 seconds with exit status 0 (successful).
+  INFO [a598720e] Running /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore on 3.135.201.144
+ DEBUG [a598720e] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore )
+  INFO [a598720e] Finished in 0.837 seconds with exit status 0 (successful).
+  INFO [1d8d699e] Running /usr/bin/env git remote update --prune on 3.135.201.144
+ DEBUG [1d8d699e] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1d8d699e] 	Fetching origin
+  INFO [1d8d699e] Finished in 0.983 seconds with exit status 0 (successful).
+ DEBUG [f487bf51] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [f487bf51] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [f487bf51] Finished in 0.533 seconds with exit status 0 (successful).
+  INFO [a67dec2d] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091416 on 3.135.201.144
+ DEBUG [a67dec2d] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091416 )
+  INFO [a67dec2d] Finished in 0.837 seconds with exit status 0 (successful).
+  INFO [c973753c] Running /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306091416 on 3.135.201.144
+ DEBUG [c973753c] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306091416 )
+  INFO [c973753c] Finished in 1.018 seconds with exit status 0 (successful).
+ DEBUG [ae0da90f] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [ae0da90f] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [ae0da90f] Finished in 0.531 seconds with exit status 0 (successful).
+ DEBUG [95e1c7f3] Running /usr/bin/env git rev-list --max-count=1 vn_deployment on 3.135.201.144
+ DEBUG [95e1c7f3] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git rev-list --max-count=1 vn_deployment )
+ DEBUG [95e1c7f3] 	7ffd6e904183343fff755ab0724e52e40b632e3b
+ DEBUG [95e1c7f3] Finished in 0.837 seconds with exit status 0 (successful).
+ DEBUG [479dc18b] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091416; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091416'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [479dc18b] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091416; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091416'" 1>&2; false; fi
+ DEBUG [479dc18b] Finished in 0.530 seconds with exit status 0 (successful).
+  INFO [11256215] Running /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION on 3.135.201.144
+ DEBUG [11256215] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306091416 && /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION
+  INFO [11256215] Finished in 0.843 seconds with exit status 0 (successful).
+  INFO [765a55cf] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091416/public on 3.135.201.144
+ DEBUG [765a55cf] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091416/public
+  INFO [765a55cf] Finished in 0.836 seconds with exit status 0 (successful).
+ DEBUG [d77c9084] Running [ -L /home/ubuntu/apps/metadata_store_application/releases/20200306091416/public/assets ] on 3.135.201.144
+ DEBUG [d77c9084] Command: [ -L /home/ubuntu/apps/metadata_store_application/releases/20200306091416/public/assets ]
+ DEBUG [d77c9084] Finished in 0.835 seconds with exit status 1 (failed).
+ DEBUG [b4a90bed] Running [ -d /home/ubuntu/apps/metadata_store_application/releases/20200306091416/public/assets ] on 3.135.201.144
+ DEBUG [b4a90bed] Command: [ -d /home/ubuntu/apps/metadata_store_application/releases/20200306091416/public/assets ]
+ DEBUG [b4a90bed] Finished in 0.846 seconds with exit status 1 (failed).
+  INFO [30954106] Running /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/shared/public/assets /home/ubuntu/apps/metadata_store_application/releases/20200306091416/public/assets on 3.135.201.144
+ DEBUG [30954106] Command: /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/shared/public/assets /home/ubuntu/apps/metadata_store_application/releases/20200306091416/public/assets
+  INFO [30954106] Finished in 0.839 seconds with exit status 0 (successful).
+ DEBUG [6ee7b972] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091416; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091416'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [6ee7b972] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091416; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091416'" 1>&2; false; fi
+ DEBUG [6ee7b972] Finished in 0.835 seconds with exit status 0 (successful).
+ DEBUG [b4a5ee8c] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle on 3.135.201.144
+ DEBUG [b4a5ee8c] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306091416 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle
+ DEBUG [b4a5ee8c] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306091416/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [b4a5ee8c] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [b4a5ee8c] 	[31mThe following gems are missing[0m
+[31m * net-ssh (5.2.0)[0m
+ DEBUG [b4a5ee8c] 	[31m * net-scp (2.0.0)[0m
+ DEBUG [b4a5ee8c] 	[31m * sshkit (1.21.0)[0m
+ DEBUG [b4a5ee8c] 	[31m * airbrussh (1.4.0)[0m
+ DEBUG [b4a5ee8c] 	[31m * byebug (11.0.1)[0m
+ DEBUG [b4a5ee8c] 	[31m * capistrano (3.12.0)[0m
+ DEBUG [b4a5ee8c] 	[31m * capistrano-bundler (1.6.0)[0m
+ DEBUG [b4a5ee8c] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [b4a5ee8c] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [b4a5ee8c] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [b4a5ee8c] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [b4a5ee8c] 	[31m * factory_bot (5.1.1)[0m
+ DEBUG [b4a5ee8c] 	[31m * factory_bot_rails (5.1.1)[0m
+ DEBUG [b4a5ee8c] 	[31m * ffi (1.12.2)[0m
+ DEBUG [b4a5ee8c] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [b4a5ee8c] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [b4a5ee8c] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [b4a5ee8c] 	[31m * listen (3.1.5)[0m
+ DEBUG [b4a5ee8c] 	[31m * mysql2 (0.5.3)[0m
+ DEBUG [b4a5ee8c] 	[31m * rspec-support (3.9.2)[0m
+ DEBUG [b4a5ee8c] 	[31m * rspec-core (3.9.1)[0m
+ DEBUG [b4a5ee8c] 	[31m * rspec-expectations (3.9.0)[0m
+ DEBUG [b4a5ee8c] 	[31m * rspec-mocks (3.9.1)[0m
+ DEBUG [b4a5ee8c] 	[31m * rspec-rails (3.9.0)[0m
+ DEBUG [b4a5ee8c] 	[31m * spring (2.0.2)[0m
+ DEBUG [b4a5ee8c] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [b4a5ee8c] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [b4a5ee8c] Finished in 1.477 seconds with exit status 1 (failed).
+  INFO [71869dec] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet on 3.135.201.144
+ DEBUG [71869dec] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306091416 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [71869dec] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306091416/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [71869dec] 	[31mGem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+current directory:
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/mysql2-0.5.3/ext/mysql2
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/ruby -r
+./siteconf20200306-22318-1gjbfue.rb extconf.rb
+checking for rb_absint_size()... yes
+checking for rb_absint_singlebit_p()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for main() in -lmysqlclient... no
+-----
+mysql client is missing. You may need to 'sudo apt-get install libmariadb-dev',
+'sudo apt-get install libmysqlclient-dev' or 'sudo yum install mysql-devel', and
+try again.
+-----
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+ DEBUG [71869dec] 	
+	--srcdir=.
+	--curdir
+	--ruby=/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/$(RUBY_BASE_NAME)
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+ DEBUG [71869dec] 	
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+	--without-mysql-config
+	
+ DEBUG [71869dec] 	--with-mysql-dir
+	--without-mysql-dir
+ DEBUG [71869dec] 		--with-mysql-include
+	
+ DEBUG [71869dec] 	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+ DEBUG [71869dec] 	
+	--without-mysql-lib=${mysql-dir}/lib
+ DEBUG [71869dec] 		--with-mysqlclientlib
+	
+ DEBUG [71869dec] 	--without-mysqlclientlib
+
+ DEBUG [71869dec] 	To see why this extension failed to compile, please check the mkmf.log which can
+be found here:
+
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/mysql2-0.5.3/mkmf.log
+ DEBUG [71869dec] 	
+extconf failed, exit code 1
+
+ DEBUG [71869dec] 	Gem files will remain installed in
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/mysql2-0.5.3
+ DEBUG [71869dec] 	
+for inspection.
+ DEBUG [71869dec] 	Results logged to
+ DEBUG [71869dec] 	/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/mysql2-0.5.3/gem_make.out
+
+An error occurred while installing mysql2 (0.5.3), and Bundler cannot continue.
+Make sure that `gem install mysql2 -v '0.5.3' --source 'https://rubygems.org/'`
+ DEBUG [71869dec] 	
+succeeds before bundling.
+ DEBUG [71869dec] 	
+
+In Gemfile:
+  mysql2[0m
+ DEBUG [71869dec] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 14:48:30 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bb7430f1] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [bb7430f1] Command: [ -d ~/.rvm ]
+ DEBUG [bb7430f1] Finished in 3.602 seconds with exit status 0 (successful).
+ DEBUG [fd18137f] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [fd18137f] Command: ~/.rvm/bin/rvm version
+ DEBUG [fd18137f] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [fd18137f] Finished in 0.940 seconds with exit status 0 (successful).
+ DEBUG [839fabad] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [839fabad] Command: ~/.rvm/bin/rvm current
+ DEBUG [839fabad] 	ruby-2.3.8
+ DEBUG [839fabad] Finished in 0.935 seconds with exit status 0 (successful).
+ DEBUG [33ff83d9] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [33ff83d9] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [33ff83d9] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [33ff83d9] Finished in 1.067 seconds with exit status 0 (successful).
+  INFO [b684a66d] Running /usr/bin/env mkdir -p /tmp on 3.135.201.144
+ DEBUG [b684a66d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [b684a66d] Finished in 0.737 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 100.0%
+  INFO [62e0c2c7] Running /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh on 3.135.201.144
+ DEBUG [62e0c2c7] Command: /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh
+  INFO [62e0c2c7] Finished in 0.746 seconds with exit status 0 (successful).
+  INFO [1a59bb42] Running /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD on 3.135.201.144
+ DEBUG [1a59bb42] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD )
+ DEBUG [1a59bb42] 	f2e4f14afb3ba79df2c3c93c06f3a4de61cdd7db	HEAD
+  INFO [1a59bb42] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [a4cb82ae] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases on 3.135.201.144
+ DEBUG [a4cb82ae] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases
+  INFO [a4cb82ae] Finished in 0.470 seconds with exit status 0 (successful).
+  INFO [9a0b3185] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared/public/assets on 3.135.201.144
+ DEBUG [9a0b3185] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared/public/assets
+  INFO [9a0b3185] Finished in 0.741 seconds with exit status 0 (successful).
+ DEBUG [d4e19a4f] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ] on 3.135.201.144
+ DEBUG [d4e19a4f] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ]
+ DEBUG [d4e19a4f] Finished in 0.741 seconds with exit status 0 (successful).
+ DEBUG [c8920ada] Running [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ] on 3.135.201.144
+ DEBUG [c8920ada] Command: [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ]
+ DEBUG [c8920ada] Finished in 0.743 seconds with exit status 1 (failed).
+ DEBUG [8bdaf6c8] Running [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ] on 3.135.201.144
+ DEBUG [8bdaf6c8] Command: [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ]
+ DEBUG [8bdaf6c8] Finished in 0.744 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/metadata_store_application/repo
+ DEBUG [fcffd8b3] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [fcffd8b3] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [fcffd8b3] Finished in 0.471 seconds with exit status 0 (successful).
+  INFO [7d692ac7] Running /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore on 3.135.201.144
+ DEBUG [7d692ac7] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore )
+  INFO [7d692ac7] Finished in 0.746 seconds with exit status 0 (successful).
+  INFO [cd0c42e1] Running /usr/bin/env git remote update --prune on 3.135.201.144
+ DEBUG [cd0c42e1] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [cd0c42e1] 	Fetching origin
+  INFO [cd0c42e1] Finished in 0.887 seconds with exit status 0 (successful).
+ DEBUG [732238d9] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [732238d9] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [732238d9] Finished in 0.469 seconds with exit status 0 (successful).
+  INFO [d72dc0fe] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091849 on 3.135.201.144
+ DEBUG [d72dc0fe] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091849 )
+  INFO [d72dc0fe] Finished in 0.755 seconds with exit status 0 (successful).
+  INFO [046b30f8] Running /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306091849 on 3.135.201.144
+ DEBUG [046b30f8] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306091849 )
+  INFO [046b30f8] Finished in 0.926 seconds with exit status 0 (successful).
+ DEBUG [909a5ffe] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [909a5ffe] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [909a5ffe] Finished in 0.469 seconds with exit status 0 (successful).
+ DEBUG [938e143c] Running /usr/bin/env git rev-list --max-count=1 vn_deployment on 3.135.201.144
+ DEBUG [938e143c] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git rev-list --max-count=1 vn_deployment )
+ DEBUG [938e143c] 	7ffd6e904183343fff755ab0724e52e40b632e3b
+ DEBUG [938e143c] Finished in 0.753 seconds with exit status 0 (successful).
+ DEBUG [a10f033b] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091849; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091849'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [a10f033b] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091849; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091849'" 1>&2; false; fi
+ DEBUG [a10f033b] Finished in 0.470 seconds with exit status 0 (successful).
+  INFO [11b464d0] Running /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION on 3.135.201.144
+ DEBUG [11b464d0] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306091849 && /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION
+  INFO [11b464d0] Finished in 0.743 seconds with exit status 0 (successful).
+  INFO [4ed6dbc2] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091849/public on 3.135.201.144
+ DEBUG [4ed6dbc2] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306091849/public
+  INFO [4ed6dbc2] Finished in 0.742 seconds with exit status 0 (successful).
+ DEBUG [bdb5411f] Running [ -L /home/ubuntu/apps/metadata_store_application/releases/20200306091849/public/assets ] on 3.135.201.144
+ DEBUG [bdb5411f] Command: [ -L /home/ubuntu/apps/metadata_store_application/releases/20200306091849/public/assets ]
+ DEBUG [bdb5411f] Finished in 0.742 seconds with exit status 1 (failed).
+ DEBUG [6edf0f0d] Running [ -d /home/ubuntu/apps/metadata_store_application/releases/20200306091849/public/assets ] on 3.135.201.144
+ DEBUG [6edf0f0d] Command: [ -d /home/ubuntu/apps/metadata_store_application/releases/20200306091849/public/assets ]
+ DEBUG [6edf0f0d] Finished in 0.743 seconds with exit status 1 (failed).
+  INFO [a23a7951] Running /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/shared/public/assets /home/ubuntu/apps/metadata_store_application/releases/20200306091849/public/assets on 3.135.201.144
+ DEBUG [a23a7951] Command: /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/shared/public/assets /home/ubuntu/apps/metadata_store_application/releases/20200306091849/public/assets
+  INFO [a23a7951] Finished in 0.744 seconds with exit status 0 (successful).
+ DEBUG [5d329df8] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091849; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091849'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [5d329df8] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091849; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091849'" 1>&2; false; fi
+ DEBUG [5d329df8] Finished in 0.742 seconds with exit status 0 (successful).
+ DEBUG [89ae2a37] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle on 3.135.201.144
+ DEBUG [89ae2a37] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306091849 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle
+ DEBUG [89ae2a37] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306091849/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [89ae2a37] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [89ae2a37] 	[31mThe following gems are missing[0m
+[31m * net-ssh (5.2.0)[0m
+ DEBUG [89ae2a37] 	[31m * net-scp (2.0.0)[0m
+ DEBUG [89ae2a37] 	[31m * sshkit (1.21.0)[0m
+ DEBUG [89ae2a37] 	[31m * airbrussh (1.4.0)[0m
+ DEBUG [89ae2a37] 	[31m * byebug (11.0.1)[0m
+ DEBUG [89ae2a37] 	[31m * capistrano (3.12.0)[0m
+ DEBUG [89ae2a37] 	[31m * capistrano-bundler (1.6.0)[0m
+ DEBUG [89ae2a37] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [89ae2a37] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [89ae2a37] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [89ae2a37] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [89ae2a37] 	[31m * factory_bot (5.1.1)[0m
+ DEBUG [89ae2a37] 	[31m * factory_bot_rails (5.1.1)[0m
+ DEBUG [89ae2a37] 	[31m * ffi (1.12.2)[0m
+ DEBUG [89ae2a37] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [89ae2a37] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [89ae2a37] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [89ae2a37] 	[31m * listen (3.1.5)[0m
+ DEBUG [89ae2a37] 	[31m * mysql2 (0.5.3)[0m
+ DEBUG [89ae2a37] 	[31m * rspec-support (3.9.2)[0m
+ DEBUG [89ae2a37] 	[31m * rspec-core (3.9.1)[0m
+ DEBUG [89ae2a37] 	[31m * rspec-expectations (3.9.0)[0m
+ DEBUG [89ae2a37] 	[31m * rspec-mocks (3.9.1)[0m
+ DEBUG [89ae2a37] 	[31m * rspec-rails (3.9.0)[0m
+ DEBUG [89ae2a37] 	[31m * spring (2.0.2)[0m
+ DEBUG [89ae2a37] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [89ae2a37] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [89ae2a37] Finished in 1.381 seconds with exit status 1 (failed).
+  INFO [6c36d2d1] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet on 3.135.201.144
+ DEBUG [6c36d2d1] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306091849 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [6c36d2d1] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306091849/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+  INFO [6c36d2d1] Finished in 9.386 seconds with exit status 0 (successful).
+ DEBUG [9e0e03e5] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091849; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091849'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [9e0e03e5] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306091849; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306091849'" 1>&2; false; fi
+ DEBUG [9e0e03e5] Finished in 0.743 seconds with exit status 0 (successful).
+  INFO [aaf72f7e] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 3.135.201.144
+ DEBUG [aaf72f7e] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306091849 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [aaf72f7e] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306091849/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [aaf72f7e] 	rake aborted!
+Don't know how to build task 'assets:precompile' (See the list of available tasks with `rake --tasks`)
+ DEBUG [aaf72f7e] 	/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/bundle:30:in `block in <main>'
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/bundle:22:in `<main>'
+/home/ubuntu/.rvm/gems/ruby-2.3.8/bin/ruby_executable_hooks:24:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.8/bin/ruby_executable_hooks:24:in `<main>'
+(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 15:01:46 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [540a8dc5] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [540a8dc5] Command: [ -d ~/.rvm ]
+ DEBUG [540a8dc5] Finished in 3.905 seconds with exit status 0 (successful).
+ DEBUG [629b8cd1] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [629b8cd1] Command: ~/.rvm/bin/rvm version
+ DEBUG [629b8cd1] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [629b8cd1] Finished in 1.057 seconds with exit status 0 (successful).
+ DEBUG [b4588f8f] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [b4588f8f] Command: ~/.rvm/bin/rvm current
+ DEBUG [b4588f8f] 	ruby-2.3.8
+ DEBUG [b4588f8f] Finished in 1.050 seconds with exit status 0 (successful).
+ DEBUG [bc5011cf] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [bc5011cf] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [bc5011cf] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [bc5011cf] Finished in 1.182 seconds with exit status 0 (successful).
+  INFO [da085c66] Running /usr/bin/env mkdir -p /tmp on 3.135.201.144
+ DEBUG [da085c66] Command: /usr/bin/env mkdir -p /tmp
+  INFO [da085c66] Finished in 0.858 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 100.0%
+  INFO [fea5e3ed] Running /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh on 3.135.201.144
+ DEBUG [fea5e3ed] Command: /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh
+  INFO [fea5e3ed] Finished in 0.858 seconds with exit status 0 (successful).
+  INFO [8ec56d3b] Running /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD on 3.135.201.144
+ DEBUG [8ec56d3b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD )
+ DEBUG [8ec56d3b] 	f2e4f14afb3ba79df2c3c93c06f3a4de61cdd7db	HEAD
+  INFO [8ec56d3b] Finished in 0.696 seconds with exit status 0 (successful).
+  INFO [5ae1f2ca] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases on 3.135.201.144
+ DEBUG [5ae1f2ca] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases
+  INFO [5ae1f2ca] Finished in 0.549 seconds with exit status 0 (successful).
+ DEBUG [17d4842b] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ] on 3.135.201.144
+ DEBUG [17d4842b] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ]
+ DEBUG [17d4842b] Finished in 0.856 seconds with exit status 0 (successful).
+ DEBUG [81888404] Running [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ] on 3.135.201.144
+ DEBUG [81888404] Command: [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ]
+ DEBUG [81888404] Finished in 0.862 seconds with exit status 1 (failed).
+ DEBUG [796d072e] Running [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ] on 3.135.201.144
+ DEBUG [796d072e] Command: [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ]
+ DEBUG [796d072e] Finished in 0.855 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/metadata_store_application/repo
+ DEBUG [bdda9f11] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [bdda9f11] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [bdda9f11] Finished in 0.547 seconds with exit status 0 (successful).
+  INFO [a5a19ac0] Running /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore on 3.135.201.144
+ DEBUG [a5a19ac0] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore )
+  INFO [a5a19ac0] Finished in 0.862 seconds with exit status 0 (successful).
+  INFO [bdd1a0eb] Running /usr/bin/env git remote update --prune on 3.135.201.144
+ DEBUG [bdd1a0eb] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [bdd1a0eb] 	Fetching origin
+  INFO [bdd1a0eb] Finished in 1.009 seconds with exit status 0 (successful).
+ DEBUG [feb36087] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [feb36087] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [feb36087] Finished in 0.547 seconds with exit status 0 (successful).
+  INFO [69f66e30] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306093206 on 3.135.201.144
+ DEBUG [69f66e30] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306093206 )
+  INFO [69f66e30] Finished in 0.861 seconds with exit status 0 (successful).
+  INFO [380f4b8d] Running /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306093206 on 3.135.201.144
+ DEBUG [380f4b8d] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306093206 )
+  INFO [380f4b8d] Finished in 1.047 seconds with exit status 0 (successful).
+ DEBUG [a8458cad] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [a8458cad] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [a8458cad] Finished in 0.548 seconds with exit status 0 (successful).
+ DEBUG [1749a57a] Running /usr/bin/env git rev-list --max-count=1 vn_deployment on 3.135.201.144
+ DEBUG [1749a57a] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git rev-list --max-count=1 vn_deployment )
+ DEBUG [1749a57a] 	7ffd6e904183343fff755ab0724e52e40b632e3b
+ DEBUG [1749a57a] Finished in 0.861 seconds with exit status 0 (successful).
+ DEBUG [05bea49e] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306093206; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306093206'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [05bea49e] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306093206; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306093206'" 1>&2; false; fi
+ DEBUG [05bea49e] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [7144a41b] Running /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION on 3.135.201.144
+ DEBUG [7144a41b] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306093206 && /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION
+  INFO [7144a41b] Finished in 0.861 seconds with exit status 0 (successful).
+ DEBUG [f18ef183] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306093206; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306093206'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [f18ef183] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306093206; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306093206'" 1>&2; false; fi
+ DEBUG [f18ef183] Finished in 0.859 seconds with exit status 0 (successful).
+ DEBUG [b94dee59] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle on 3.135.201.144
+ DEBUG [b94dee59] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306093206 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle
+ DEBUG [b94dee59] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306093206/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [b94dee59] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [b94dee59] 	[31mThe following gems are missing[0m
+[31m * net-ssh (5.2.0)[0m
+ DEBUG [b94dee59] 	[31m * net-scp (2.0.0)[0m
+ DEBUG [b94dee59] 	[31m * sshkit (1.21.0)[0m
+ DEBUG [b94dee59] 	[31m * airbrussh (1.4.0)[0m
+ DEBUG [b94dee59] 	[31m * byebug (11.0.1)[0m
+ DEBUG [b94dee59] 	[31m * capistrano (3.12.0)[0m
+ DEBUG [b94dee59] 	[31m * capistrano-bundler (1.6.0)[0m
+ DEBUG [b94dee59] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [b94dee59] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [b94dee59] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [b94dee59] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [b94dee59] 	[31m * factory_bot (5.1.1)[0m
+ DEBUG [b94dee59] 	[31m * factory_bot_rails (5.1.1)[0m
+ DEBUG [b94dee59] 	[31m * ffi (1.12.2)[0m
+ DEBUG [b94dee59] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [b94dee59] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [b94dee59] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [b94dee59] 	[31m * listen (3.1.5)[0m
+ DEBUG [b94dee59] 	[31m * rspec-support (3.9.2)[0m
+ DEBUG [b94dee59] 	[31m * rspec-core (3.9.1)[0m
+ DEBUG [b94dee59] 	[31m * rspec-expectations (3.9.0)[0m
+ DEBUG [b94dee59] 	[31m * rspec-mocks (3.9.1)[0m
+ DEBUG [b94dee59] 	[31m * rspec-rails (3.9.0)[0m
+ DEBUG [b94dee59] 	[31m * spring (2.0.2)[0m
+ DEBUG [b94dee59] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [b94dee59] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [b94dee59] Finished in 1.750 seconds with exit status 1 (failed).
+  INFO [d7b8871b] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet on 3.135.201.144
+ DEBUG [d7b8871b] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306093206 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [d7b8871b] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306093206/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+  INFO [d7b8871b] Finished in 1.787 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [1a82e1a8] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306093206; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306093206'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [1a82e1a8] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306093206; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306093206'" 1>&2; false; fi
+ DEBUG [1a82e1a8] Finished in 0.859 seconds with exit status 0 (successful).
+  INFO [2a9ece46] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 3.135.201.144
+ DEBUG [2a9ece46] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306093206 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [2a9ece46] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306093206/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+ DEBUG [2a9ece46] 	
+[0m
+ DEBUG [2a9ece46] 	rake aborted!
+ DEBUG [2a9ece46] 	Mysql2::Error::ConnectionError: Access denied for user 'metaStoreApp'@'localhost' (using password: NO)
+ DEBUG [2a9ece46] 	/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/mysql2-0.5.3/lib/mysql2/client.rb:90:in `connect'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/mysql2-0.5.3/lib/mysql2/client.rb:90:in `initialize'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+ DEBUG [2a9ece46] 	/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_handling.rb:90:in `connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/tasks/database_tasks.rb:172:in `migrate'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/railties/databases.rake:60:in `block (2 levels) in <main>'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/bundle:30:in `block in <main>'
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/bundle:22:in `<main>'
+/home/ubuntu/.rvm/gems/ruby-2.3.8/bin/ruby_executable_hooks:24:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.8/bin/ruby_executable_hooks:24:in `<main>'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 15:17:24 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bfd4ef02] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [bfd4ef02] Command: [ -d ~/.rvm ]
+ DEBUG [bfd4ef02] Finished in 4.094 seconds with exit status 0 (successful).
+ DEBUG [8f6ed501] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [8f6ed501] Command: ~/.rvm/bin/rvm version
+ DEBUG [8f6ed501] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [8f6ed501] Finished in 1.096 seconds with exit status 0 (successful).
+ DEBUG [1d24e604] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [1d24e604] Command: ~/.rvm/bin/rvm current
+ DEBUG [1d24e604] 	ruby-2.3.8
+ DEBUG [1d24e604] Finished in 1.115 seconds with exit status 0 (successful).
+ DEBUG [2c628701] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [2c628701] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [2c628701] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [2c628701] Finished in 1.234 seconds with exit status 0 (successful).
+  INFO [60f09486] Running /usr/bin/env mkdir -p /tmp on 3.135.201.144
+ DEBUG [60f09486] Command: /usr/bin/env mkdir -p /tmp
+  INFO [60f09486] Finished in 0.895 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 100.0%
+  INFO [e3b48fb9] Running /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh on 3.135.201.144
+ DEBUG [e3b48fb9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh
+  INFO [e3b48fb9] Finished in 0.903 seconds with exit status 0 (successful).
+  INFO [4b7fa39b] Running /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD on 3.135.201.144
+ DEBUG [4b7fa39b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD )
+ DEBUG [4b7fa39b] 	f2e4f14afb3ba79df2c3c93c06f3a4de61cdd7db	HEAD
+  INFO [4b7fa39b] Finished in 0.713 seconds with exit status 0 (successful).
+  INFO [f9495c52] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases on 3.135.201.144
+ DEBUG [f9495c52] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases
+  INFO [f9495c52] Finished in 0.581 seconds with exit status 0 (successful).
+ DEBUG [dca09d0d] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ] on 3.135.201.144
+ DEBUG [dca09d0d] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ]
+ DEBUG [dca09d0d] Finished in 0.900 seconds with exit status 0 (successful).
+ DEBUG [f8bff501] Running [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ] on 3.135.201.144
+ DEBUG [f8bff501] Command: [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ]
+ DEBUG [f8bff501] Finished in 0.902 seconds with exit status 1 (failed).
+ DEBUG [66450e47] Running [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ] on 3.135.201.144
+ DEBUG [66450e47] Command: [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ]
+ DEBUG [66450e47] Finished in 0.898 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/metadata_store_application/repo
+ DEBUG [692b3421] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [692b3421] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [692b3421] Finished in 0.575 seconds with exit status 0 (successful).
+  INFO [6b99e4d8] Running /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore on 3.135.201.144
+ DEBUG [6b99e4d8] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore )
+  INFO [6b99e4d8] Finished in 0.904 seconds with exit status 0 (successful).
+  INFO [310584fd] Running /usr/bin/env git remote update --prune on 3.135.201.144
+ DEBUG [310584fd] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [310584fd] 	Fetching origin
+  INFO [310584fd] Finished in 1.055 seconds with exit status 0 (successful).
+ DEBUG [6b12bf4e] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [6b12bf4e] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [6b12bf4e] Finished in 0.575 seconds with exit status 0 (successful).
+  INFO [98ce3e87] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306094744 on 3.135.201.144
+ DEBUG [98ce3e87] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306094744 )
+  INFO [98ce3e87] Finished in 0.904 seconds with exit status 0 (successful).
+  INFO [0ca44d77] Running /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306094744 on 3.135.201.144
+ DEBUG [0ca44d77] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306094744 )
+  INFO [0ca44d77] Finished in 1.088 seconds with exit status 0 (successful).
+ DEBUG [5d41605e] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [5d41605e] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [5d41605e] Finished in 0.576 seconds with exit status 0 (successful).
+ DEBUG [e0a8d9fd] Running /usr/bin/env git rev-list --max-count=1 vn_deployment on 3.135.201.144
+ DEBUG [e0a8d9fd] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git rev-list --max-count=1 vn_deployment )
+ DEBUG [e0a8d9fd] 	7ffd6e904183343fff755ab0724e52e40b632e3b
+ DEBUG [e0a8d9fd] Finished in 0.901 seconds with exit status 0 (successful).
+ DEBUG [af44691a] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306094744; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306094744'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [af44691a] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306094744; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306094744'" 1>&2; false; fi
+ DEBUG [af44691a] Finished in 0.575 seconds with exit status 0 (successful).
+  INFO [be71ad6c] Running /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION on 3.135.201.144
+ DEBUG [be71ad6c] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306094744 && /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION
+  INFO [be71ad6c] Finished in 0.903 seconds with exit status 0 (successful).
+ DEBUG [9c3d09d3] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306094744; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306094744'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [9c3d09d3] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306094744; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306094744'" 1>&2; false; fi
+ DEBUG [9c3d09d3] Finished in 0.906 seconds with exit status 0 (successful).
+ DEBUG [b48edde7] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle on 3.135.201.144
+ DEBUG [b48edde7] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306094744 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle
+ DEBUG [b48edde7] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306094744/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [b48edde7] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [b48edde7] 	[31mThe following gems are missing[0m
+ DEBUG [b48edde7] 	[31m * net-ssh (5.2.0)[0m
+[31m * net-scp (2.0.0)[0m
+[31m * sshkit (1.21.0)[0m
+ DEBUG [b48edde7] 	[31m * airbrussh (1.4.0)[0m
+ DEBUG [b48edde7] 	[31m * byebug (11.0.1)[0m
+ DEBUG [b48edde7] 	[31m * capistrano (3.12.0)[0m
+ DEBUG [b48edde7] 	[31m * capistrano-bundler (1.6.0)[0m
+ DEBUG [b48edde7] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [b48edde7] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [b48edde7] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [b48edde7] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [b48edde7] 	[31m * factory_bot (5.1.1)[0m
+ DEBUG [b48edde7] 	[31m * factory_bot_rails (5.1.1)[0m
+ DEBUG [b48edde7] 	[31m * ffi (1.12.2)[0m
+ DEBUG [b48edde7] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [b48edde7] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [b48edde7] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [b48edde7] 	[31m * listen (3.1.5)[0m
+ DEBUG [b48edde7] 	[31m * rspec-support (3.9.2)[0m
+ DEBUG [b48edde7] 	[31m * rspec-core (3.9.1)[0m
+ DEBUG [b48edde7] 	[31m * rspec-expectations (3.9.0)[0m
+ DEBUG [b48edde7] 	[31m * rspec-mocks (3.9.1)[0m
+ DEBUG [b48edde7] 	[31m * rspec-rails (3.9.0)[0m
+ DEBUG [b48edde7] 	[31m * spring (2.0.2)[0m
+ DEBUG [b48edde7] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [b48edde7] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [b48edde7] Finished in 1.819 seconds with exit status 1 (failed).
+  INFO [cb207333] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet on 3.135.201.144
+ DEBUG [cb207333] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306094744 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [cb207333] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306094744/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+  INFO [cb207333] Finished in 1.849 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [e37926a7] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306094744; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306094744'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [e37926a7] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306094744; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306094744'" 1>&2; false; fi
+ DEBUG [e37926a7] Finished in 0.901 seconds with exit status 0 (successful).
+  INFO [1a349b1e] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 3.135.201.144
+ DEBUG [1a349b1e] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306094744 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [1a349b1e] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306094744/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [1a349b1e] 	rake aborted!
+ActiveRecord::NoDatabaseError: Unknown database 'metaStoreApp_production'
+ DEBUG [1a349b1e] 	/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/mysql2_adapter.rb:26:in `rescue in mysql2_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/mysql2_adapter.rb:12:in `mysql2_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+ DEBUG [1a349b1e] 	
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_handling.rb:90:in `connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/tasks/database_tasks.rb:172:in `migrate'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/railties/databases.rake:60:in `block (2 levels) in <main>'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/bundle:30:in `block in <main>'
+ DEBUG [1a349b1e] 	
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/bundle:22:in `<main>'
+/home/ubuntu/.rvm/gems/ruby-2.3.8/bin/ruby_executable_hooks:24:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.8/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [1a349b1e] 	
+Caused by:
+ DEBUG [1a349b1e] 	Mysql2::Error: Unknown database 'metaStoreApp_production'
+ DEBUG [1a349b1e] 	/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/mysql2-0.5.3/lib/mysql2/client.rb:90:in `connect'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/mysql2-0.5.3/lib/mysql2/client.rb:90:in `initialize'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/connection_handling.rb:90:in `connection'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/tasks/database_tasks.rb:172:in `migrate'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/activerecord-5.2.4.1/lib/active_record/railties/databases.rake:60:in `block (2 levels) in <main>'
+/home/ubuntu/apps/metadata_store_application/shared/bundle/ruby/2.3.0/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/bundle:30:in `block in <main>'
+/home/ubuntu/.rvm/rubies/ruby-2.3.8/bin/bundle:22:in `<main>'
+/home/ubuntu/.rvm/gems/ruby-2.3.8/bin/ruby_executable_hooks:24:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.8/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [1a349b1e] 	Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 15:20:42 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d2da0ec0] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [d2da0ec0] Command: [ -d ~/.rvm ]
+ DEBUG [d2da0ec0] Finished in 3.820 seconds with exit status 0 (successful).
+ DEBUG [3add7782] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [3add7782] Command: ~/.rvm/bin/rvm version
+ DEBUG [3add7782] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [3add7782] Finished in 1.037 seconds with exit status 0 (successful).
+ DEBUG [df4d4733] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [df4d4733] Command: ~/.rvm/bin/rvm current
+ DEBUG [df4d4733] 	ruby-2.3.8
+ DEBUG [df4d4733] Finished in 1.028 seconds with exit status 0 (successful).
+ DEBUG [e908d195] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [e908d195] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [e908d195] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [e908d195] Finished in 1.160 seconds with exit status 0 (successful).
+  INFO [f3b6e5f3] Running /usr/bin/env mkdir -p /tmp on 3.135.201.144
+ DEBUG [f3b6e5f3] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f3b6e5f3] Finished in 0.830 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 100.0%
+  INFO [bffc72d7] Running /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh on 3.135.201.144
+ DEBUG [bffc72d7] Command: /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh
+  INFO [bffc72d7] Finished in 0.835 seconds with exit status 0 (successful).
+  INFO [07f2b5ce] Running /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD on 3.135.201.144
+ DEBUG [07f2b5ce] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD )
+ DEBUG [07f2b5ce] 	f2e4f14afb3ba79df2c3c93c06f3a4de61cdd7db	HEAD
+  INFO [07f2b5ce] Finished in 0.676 seconds with exit status 0 (successful).
+  INFO [5c8ba2ec] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases on 3.135.201.144
+ DEBUG [5c8ba2ec] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases
+  INFO [5c8ba2ec] Finished in 0.532 seconds with exit status 0 (successful).
+ DEBUG [e4c1e9b3] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ] on 3.135.201.144
+ DEBUG [e4c1e9b3] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ]
+ DEBUG [e4c1e9b3] Finished in 0.834 seconds with exit status 0 (successful).
+ DEBUG [1be5d724] Running [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ] on 3.135.201.144
+ DEBUG [1be5d724] Command: [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ]
+ DEBUG [1be5d724] Finished in 0.835 seconds with exit status 1 (failed).
+ DEBUG [e38cf690] Running [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ] on 3.135.201.144
+ DEBUG [e38cf690] Command: [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ]
+ DEBUG [e38cf690] Finished in 0.835 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/metadata_store_application/repo
+ DEBUG [56d403d0] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [56d403d0] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [56d403d0] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO [4cbc7f16] Running /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore on 3.135.201.144
+ DEBUG [4cbc7f16] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore )
+  INFO [4cbc7f16] Finished in 0.837 seconds with exit status 0 (successful).
+  INFO [1647ce11] Running /usr/bin/env git remote update --prune on 3.135.201.144
+ DEBUG [1647ce11] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1647ce11] 	Fetching origin
+  INFO [1647ce11] Finished in 0.984 seconds with exit status 0 (successful).
+ DEBUG [0320774e] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [0320774e] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [0320774e] Finished in 0.535 seconds with exit status 0 (successful).
+  INFO [b8a982b9] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306095101 on 3.135.201.144
+ DEBUG [b8a982b9] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306095101 )
+  INFO [b8a982b9] Finished in 0.841 seconds with exit status 0 (successful).
+  INFO [f578ead7] Running /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306095101 on 3.135.201.144
+ DEBUG [f578ead7] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306095101 )
+  INFO [f578ead7] Finished in 1.021 seconds with exit status 0 (successful).
+ DEBUG [8c9fdb71] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [8c9fdb71] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [8c9fdb71] Finished in 0.530 seconds with exit status 0 (successful).
+ DEBUG [8e1914ce] Running /usr/bin/env git rev-list --max-count=1 vn_deployment on 3.135.201.144
+ DEBUG [8e1914ce] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git rev-list --max-count=1 vn_deployment )
+ DEBUG [8e1914ce] 	7ffd6e904183343fff755ab0724e52e40b632e3b
+ DEBUG [8e1914ce] Finished in 0.839 seconds with exit status 0 (successful).
+ DEBUG [97435f1a] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306095101; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306095101'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [97435f1a] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306095101; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306095101'" 1>&2; false; fi
+ DEBUG [97435f1a] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO [2289bb39] Running /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION on 3.135.201.144
+ DEBUG [2289bb39] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306095101 && /usr/bin/env echo "7ffd6e904183343fff755ab0724e52e40b632e3b" > REVISION
+  INFO [2289bb39] Finished in 0.839 seconds with exit status 0 (successful).
+ DEBUG [12fce166] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306095101; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306095101'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [12fce166] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306095101; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306095101'" 1>&2; false; fi
+ DEBUG [12fce166] Finished in 0.836 seconds with exit status 0 (successful).
+ DEBUG [81b6a3d5] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle on 3.135.201.144
+ DEBUG [81b6a3d5] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306095101 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle
+ DEBUG [81b6a3d5] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306095101/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [81b6a3d5] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [81b6a3d5] 	[31mThe following gems are missing[0m
+ DEBUG [81b6a3d5] 	[31m * net-ssh (5.2.0)[0m
+[31m * net-scp (2.0.0)[0m
+ DEBUG [81b6a3d5] 	[31m * sshkit (1.21.0)[0m
+[31m * airbrussh (1.4.0)[0m
+ DEBUG [81b6a3d5] 	[31m * byebug (11.0.1)[0m
+ DEBUG [81b6a3d5] 	[31m * capistrano (3.12.0)[0m
+ DEBUG [81b6a3d5] 	[31m * capistrano-bundler (1.6.0)[0m
+ DEBUG [81b6a3d5] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [81b6a3d5] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [81b6a3d5] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [81b6a3d5] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [81b6a3d5] 	[31m * factory_bot (5.1.1)[0m
+ DEBUG [81b6a3d5] 	[31m * factory_bot_rails (5.1.1)[0m
+ DEBUG [81b6a3d5] 	[31m * ffi (1.12.2)[0m
+ DEBUG [81b6a3d5] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [81b6a3d5] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [81b6a3d5] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [81b6a3d5] 	[31m * listen (3.1.5)[0m
+ DEBUG [81b6a3d5] 	[31m * rspec-support (3.9.2)[0m
+ DEBUG [81b6a3d5] 	[31m * rspec-core (3.9.1)[0m
+[31m * rspec-expectations (3.9.0)[0m
+ DEBUG [81b6a3d5] 	[31m * rspec-mocks (3.9.1)[0m
+ DEBUG [81b6a3d5] 	[31m * rspec-rails (3.9.0)[0m
+ DEBUG [81b6a3d5] 	[31m * spring (2.0.2)[0m
+ DEBUG [81b6a3d5] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [81b6a3d5] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [81b6a3d5] Finished in 1.729 seconds with exit status 1 (failed).
+  INFO [f8863f7b] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet on 3.135.201.144
+ DEBUG [f8863f7b] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306095101 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [f8863f7b] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306095101/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+  INFO [f8863f7b] Finished in 1.754 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [60f1d4c3] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306095101; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306095101'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [60f1d4c3] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306095101; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306095101'" 1>&2; false; fi
+ DEBUG [60f1d4c3] Finished in 0.833 seconds with exit status 0 (successful).
+  INFO [280df6e8] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 3.135.201.144
+ DEBUG [280df6e8] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306095101 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [280df6e8] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306095101/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [280df6e8] 	== 20200225070427 CreateAccounts: migrating ===================================
+ DEBUG [280df6e8] 	-- create_table(:accounts)
+ DEBUG [280df6e8] 	   -> 0.0669s
+ DEBUG [280df6e8] 	== 20200225070427 CreateAccounts: migrated (0.0670s) ==========================
+
+ DEBUG [280df6e8] 	== 20200228071518 CreateMedia: migrating ======================================
+ DEBUG [280df6e8] 	-- create_table(:media, {:id=>false})
+ DEBUG [280df6e8] 	   -> 0.0823s
+ DEBUG [280df6e8] 	-- execute("ALTER TABLE media ADD PRIMARY KEY (asset_id);")
+ DEBUG [280df6e8] 	   -> 0.1370s
+ DEBUG [280df6e8] 	== 20200228071518 CreateMedia: migrated (0.2194s) =============================
+
+ DEBUG [280df6e8] 	== 20200229142801 AddDefaultDuration: migrating ===============================
+ DEBUG [280df6e8] 	-- execute("ALTER TABLE `media` ALTER `duration` SET DEFAULT 0;")
+ DEBUG [280df6e8] 	   -> 0.0096s
+ DEBUG [280df6e8] 	== 20200229142801 AddDefaultDuration: migrated (0.0097s) ======================
+
+ DEBUG [280df6e8] 	== 20200303065119 RollbackDefaultDuration: migrating ==========================
+ DEBUG [280df6e8] 	-- change_column_default(:media, :duration, 0)
+ DEBUG [280df6e8] 	   -> 0.0099s
+ DEBUG [280df6e8] 	== 20200303065119 RollbackDefaultDuration: migrated (0.0100s) =================
+
+  INFO [280df6e8] Finished in 3.544 seconds with exit status 0 (successful).
+  INFO [571b4f39] Running /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/releases/20200306095101 /home/ubuntu/apps/metadata_store_application/releases/current on 3.135.201.144
+ DEBUG [571b4f39] Command: /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/releases/20200306095101 /home/ubuntu/apps/metadata_store_application/releases/current
+  INFO [571b4f39] Finished in 0.834 seconds with exit status 0 (successful).
+  INFO [0218f510] Running /usr/bin/env mv /home/ubuntu/apps/metadata_store_application/releases/current /home/ubuntu/apps/metadata_store_application on 3.135.201.144
+ DEBUG [0218f510] Command: /usr/bin/env mv /home/ubuntu/apps/metadata_store_application/releases/current /home/ubuntu/apps/metadata_store_application
+  INFO [0218f510] Finished in 0.836 seconds with exit status 0 (successful).
+ DEBUG [bd9768c6] Running /usr/bin/env ls -x /home/ubuntu/apps/metadata_store_application/releases on 3.135.201.144
+ DEBUG [bd9768c6] Command: /usr/bin/env ls -x /home/ubuntu/apps/metadata_store_application/releases
+ DEBUG [bd9768c6] 	20200306085011	20200306085501	20200306085745	20200306090234	20200306090539
+20200306091151	20200306091416	20200306091849	20200306093206	20200306094744
+20200306095101
+ DEBUG [bd9768c6] Finished in 0.835 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 11 deployed releases on 3.135.201.144
+ DEBUG [44bb23dd] Running [ -d /home/ubuntu/apps/metadata_store_application/current ] on 3.135.201.144
+ DEBUG [44bb23dd] Command: [ -d /home/ubuntu/apps/metadata_store_application/current ]
+ DEBUG [44bb23dd] Finished in 0.832 seconds with exit status 0 (successful).
+ DEBUG [15876bfe] Running /usr/bin/env readlink /home/ubuntu/apps/metadata_store_application/current on 3.135.201.144
+ DEBUG [15876bfe] Command: /usr/bin/env readlink /home/ubuntu/apps/metadata_store_application/current
+ DEBUG [15876bfe] 	/home/ubuntu/apps/metadata_store_application/releases/20200306095101
+ DEBUG [15876bfe] Finished in 0.837 seconds with exit status 0 (successful).
+  INFO [768cc317] Running /usr/bin/env rm -rf /home/ubuntu/apps/metadata_store_application/releases/20200306085011 /home/ubuntu/apps/metadata_store_application/releases/20200306085501 /home/ubuntu/apps/metadata_store_application/releases/20200306085745 /home/ubuntu/apps/metadata_store_application/releases/20200306090234 /home/ubuntu/apps/metadata_store_application/releases/20200306090539 /home/ubuntu/apps/metadata_store_application/releases/20200306091151 on 3.135.201.144
+ DEBUG [768cc317] Command: /usr/bin/env rm -rf /home/ubuntu/apps/metadata_store_application/releases/20200306085011 /home/ubuntu/apps/metadata_store_application/releases/20200306085501 /home/ubuntu/apps/metadata_store_application/releases/20200306085745 /home/ubuntu/apps/metadata_store_application/releases/20200306090234 /home/ubuntu/apps/metadata_store_application/releases/20200306090539 /home/ubuntu/apps/metadata_store_application/releases/20200306091151
+  INFO [768cc317] Finished in 0.957 seconds with exit status 0 (successful).
