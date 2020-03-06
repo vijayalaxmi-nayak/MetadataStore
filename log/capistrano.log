@@ -392,3 +392,21 @@
  DEBUG [416e4b36] Command: ~/.rvm/bin/rvm default do ruby --version
  DEBUG [416e4b36] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
  DEBUG [416e4b36] Finished in 1.069 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 14:13:24 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c4ce8888] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [c4ce8888] Command: [ -d ~/.rvm ]
+ DEBUG [c4ce8888] Finished in 3.494 seconds with exit status 0 (successful).
+ DEBUG [3bd54075] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [3bd54075] Command: ~/.rvm/bin/rvm version
+ DEBUG [3bd54075] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [3bd54075] Finished in 0.951 seconds with exit status 0 (successful).
+ DEBUG [ae8225aa] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [ae8225aa] Command: ~/.rvm/bin/rvm current
+ DEBUG [ae8225aa] 	ruby-2.3.8
+ DEBUG [ae8225aa] Finished in 0.945 seconds with exit status 0 (successful).
+ DEBUG [b59362fd] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [b59362fd] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [b59362fd] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [b59362fd] Finished in 1.079 seconds with exit status 0 (successful).
