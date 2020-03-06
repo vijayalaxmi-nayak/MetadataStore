@@ -2734,3 +2734,393 @@ To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
   INFO [768cc317] Running /usr/bin/env rm -rf /home/ubuntu/apps/metadata_store_application/releases/20200306085011 /home/ubuntu/apps/metadata_store_application/releases/20200306085501 /home/ubuntu/apps/metadata_store_application/releases/20200306085745 /home/ubuntu/apps/metadata_store_application/releases/20200306090234 /home/ubuntu/apps/metadata_store_application/releases/20200306090539 /home/ubuntu/apps/metadata_store_application/releases/20200306091151 on 3.135.201.144
  DEBUG [768cc317] Command: /usr/bin/env rm -rf /home/ubuntu/apps/metadata_store_application/releases/20200306085011 /home/ubuntu/apps/metadata_store_application/releases/20200306085501 /home/ubuntu/apps/metadata_store_application/releases/20200306085745 /home/ubuntu/apps/metadata_store_application/releases/20200306090234 /home/ubuntu/apps/metadata_store_application/releases/20200306090539 /home/ubuntu/apps/metadata_store_application/releases/20200306091151
   INFO [768cc317] Finished in 0.957 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 15:31:03 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1f8e12aa] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [1f8e12aa] Command: [ -d ~/.rvm ]
+ DEBUG [1f8e12aa] Finished in 3.443 seconds with exit status 0 (successful).
+ DEBUG [41cbfea9] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [41cbfea9] Command: ~/.rvm/bin/rvm version
+ DEBUG [41cbfea9] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [41cbfea9] Finished in 0.942 seconds with exit status 0 (successful).
+ DEBUG [e1bf4f11] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [e1bf4f11] Command: ~/.rvm/bin/rvm current
+ DEBUG [e1bf4f11] 	ruby-2.3.8
+ DEBUG [e1bf4f11] Finished in 0.936 seconds with exit status 0 (successful).
+ DEBUG [bde9840f] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [bde9840f] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [bde9840f] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [bde9840f] Finished in 1.071 seconds with exit status 0 (successful).
+  INFO [445a4e57] Running /usr/bin/env mkdir -p /tmp on 3.135.201.144
+ DEBUG [445a4e57] Command: /usr/bin/env mkdir -p /tmp
+  INFO [445a4e57] Finished in 0.738 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-metadata_store_application-production-amagi.sh 100.0%
+  INFO [0c0408e8] Running /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh on 3.135.201.144
+ DEBUG [0c0408e8] Command: /usr/bin/env chmod 700 /tmp/git-ssh-metadata_store_application-production-amagi.sh
+  INFO [0c0408e8] Finished in 0.742 seconds with exit status 0 (successful).
+  INFO [e4951f22] Running /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD on 3.135.201.144
+ DEBUG [e4951f22] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git ls-remote https://github.com/vijayalaxmi-nayak/MetadataStore HEAD )
+ DEBUG [e4951f22] 	f2e4f14afb3ba79df2c3c93c06f3a4de61cdd7db	HEAD
+  INFO [e4951f22] Finished in 0.617 seconds with exit status 0 (successful).
+  INFO [90e44444] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases on 3.135.201.144
+ DEBUG [90e44444] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/shared /home/ubuntu/apps/metadata_store_application/releases
+  INFO [90e44444] Finished in 0.471 seconds with exit status 0 (successful).
+ DEBUG [26a9a270] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ] on 3.135.201.144
+ DEBUG [26a9a270] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ]
+ DEBUG [26a9a270] Finished in 0.749 seconds with exit status 0 (successful).
+ DEBUG [c9ed9f3b] Running [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ] on 3.135.201.144
+ DEBUG [c9ed9f3b] Command: [ -f /home/ubuntu/apps/metadata_store_application/current/REVISION ]
+ DEBUG [c9ed9f3b] Finished in 0.741 seconds with exit status 0 (successful).
+ DEBUG [a224613f] Running /usr/bin/env cat /home/ubuntu/apps/metadata_store_application/current/REVISION 2>/dev/null on 3.135.201.144
+ DEBUG [a224613f] Command: /usr/bin/env cat /home/ubuntu/apps/metadata_store_application/current/REVISION 2>/dev/null
+ DEBUG [a224613f] 	7ffd6e904183343fff755ab0724e52e40b632e3b
+ DEBUG [a224613f] Finished in 0.745 seconds with exit status 0 (successful).
+ DEBUG [ce5d0201] Running [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ] on 3.135.201.144
+ DEBUG [ce5d0201] Command: [ -f /home/ubuntu/apps/metadata_store_application/repo/HEAD ]
+ DEBUG [ce5d0201] Finished in 0.742 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/metadata_store_application/repo
+ DEBUG [005f3cab] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [005f3cab] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [005f3cab] Finished in 0.469 seconds with exit status 0 (successful).
+  INFO [56ca1b0f] Running /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore on 3.135.201.144
+ DEBUG [56ca1b0f] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote set-url origin https://github.com/vijayalaxmi-nayak/MetadataStore )
+  INFO [56ca1b0f] Finished in 0.743 seconds with exit status 0 (successful).
+  INFO [50e668a5] Running /usr/bin/env git remote update --prune on 3.135.201.144
+ DEBUG [50e668a5] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [50e668a5] 	Fetching origin
+ DEBUG [50e668a5] 	remote: Enumerating objects: 203, done.[K
+remote: Counting objects:   0% (1/203)[Kremote: Counting objects:   1% (3/203)[Kremote: Counting objects:   2% (5/203)[Kremote: Counting objects:   3% (7/203)[Kremote: Counting objects:   4% (9/203)[Kremote: Counting objects:   5% (11/203)[Kremote: Counting objects:   6% (13/203)[Kremote: Counting objects:   7% (15/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:   8% (17/203)[Kremote: Counting objects:   9% (19/203)[Kremote: Counting objects:  10% (21/203)[Kremote: Counting objects:  11% (23/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  12% (25/203)[Kremote: Counting objects:  13% (27/203)[Kremote: Counting objects:  14% (29/203)[Kremote: Counting objects:  15% (31/203)[Kremote: Counting objects:  16% (33/203)[Kremote: Counting objects:  17% (35/203)[Kremote: Counting objects:  18% (37/203)[Kremote: Counting objects:  19% (39/203)[Kremote: Counting objects:  20% (41/203)[Kremote: Counting objects:  21% (43/203)[Kremote: Counting objects:  22% (45/203)[Kremote: Counting objects:  23% (47/203)[Kremote: Counting objects:  24% (49/203)[Kremote: Counting objects:  25% (51/203)[Kremote: Counting objects:  26% (53/203)[Kremote: Counting objects:  27% (55/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  28% (57/203)[Kremote: Counting objects:  29% (59/203)[Kremote: Counting objects:  30% (61/203)[Kremote: Counting objects:  31% (63/203)[Kremote: Counting objects:  32% (65/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  33% (67/203)[Kremote: Counting objects:  34% (70/203)[Kremote: Counting objects:  35% (72/203)[Kremote: Counting objects:  36% (74/203)[Kremote: Counting objects:  37% (76/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  38% (78/203)[Kremote: Counting objects:  39% (80/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  40% (82/203)[Kremote: Counting objects:  41% (84/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  42% (86/203)[Kremote: Counting objects:  43% (88/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  44% (90/203)[Kremote: Counting objects:  45% (92/203)[Kremote: Counting objects:  46% (94/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  47% (96/203)[Kremote: Counting objects:  48% (98/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  49% (100/203)[Kremote: Counting objects:  50% (102/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  51% (104/203)[Kremote: Counting objects:  52% (106/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  53% (108/203)[Kremote: Counting objects:  54% (110/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  55% (112/203)[Kremote: Counting objects:  56% (114/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  57% (116/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  58% (118/203)[Kremote: Counting objects:  59% (120/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  60% (122/203)[Kremote: Counting objects:  61% (124/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  62% (126/203)[Kremote: Counting objects:  63% (128/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  64% (130/203)[Kremote: Counting objects:  65% (132/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  66% (134/203)[Kremote: Counting objects:  67% (137/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  68% (139/203)[Kremote: Counting objects:  69% (141/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  70% (143/203)[Kremote: Counting objects:  71% (145/203)[Kremote: Counting objects:  72% (147/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  73% (149/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  74% (151/203)[Kremote: Counting objects:  75% (153/203)[Kremote: Counting objects:  76% (155/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  77% (157/203)[Kremote: Counting objects:  78% (159/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  79% (161/203)[Kremote: Counting objects:  80% (163/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  81% (165/203)remote: Counting objects:  82% (167/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  83% (169/203)[Kremote: Counting objects:  84% (171/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  85% (173/203)[Kremote: Counting objects:  86% (175/203)[Kremote: Counting objects:  87% (177/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  88% (179/203)[Kremote: Counting objects:  89% (181/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  90% (183/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  91% (185/203)[Kremote: Counting objects:  92% (187/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  93% (189/203)[Kremote: Counting objects:  94% (191/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  95% (193/203)[Kremote: Counting objects:  96% (195/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  97% (197/203)[Kremote: Counting objects:  98% (199/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects:  99% (201/203)[Kremote: Counting objects: 100% (203/203)[K
+ DEBUG [50e668a5] 	remote: Counting objects: 100% (203/203), done.[K
+remote: Compressing objects:   2% (1/37)[K
+ DEBUG [50e668a5] 	remote: Compressing objects:   5% (2/37)[K
+ DEBUG [50e668a5] 	remote: Compressing objects:   8% (3/37)[K
+ DEBUG [50e668a5] 	remote: Compressing objects:  10% (4/37)[Kremote: Compressing objects:  13% (5/37)[Kremote: Compressing objects:  16% (6/37)[Kremote: Compressing objects:  18% (7/37)[Kremote: Compressing objects:  21% (8/37)[Kremote: Compressing objects:  24% (9/37)[Kremote: Compressing objects:  27% (10/37)[Kremote: Compressing objects:  29% (11/37)[Kremote: Compressing objects:  32% (12/37)[Kremote: Compressing objects:  35% (13/37)[Kremote: Compressing objects:  37% (14/37)[Kremote: Compressing objects:  40% (15/37)[Kremote: Compressing objects:  43% (16/37)[Kremote: Compressing objects:  45% (17/37)[Kremote: Compressing objects:  48% (18/37)[Kremote: Compressing objects:  51% (19/37)[Kremote: Compressing objects:  54% (20/37)[Kremote: Compressing objects:  56% (21/37)[Kremote: Compressing objects:  59% (22/37)[Kremote: Compressing objects:  62% (23/37)[Kremote: Compressing objects:  64% (24/37)[Kremote: Compressing objects:  67% (25/37)[Kremote: Compressing objects:  70% (26/37)[Kremote: Compressing objects:  72% (27/37)[Kremote: Compressing objects:  75% (28/37)[Kremote: Compressing objects:  78% (29/37)[Kremote: Compressing objects:  81% (30/37)[Kremote: Compressing objects:  83% (31/37)[Kremote: Compressing objects:  86% (32/37)[Kremote: Compressing objects:  89% (33/37)[Kremote: Compressing objects:  91% (34/37)[Kremote: Compressing objects:  94% (35/37)[K
+ DEBUG [50e668a5] 	remote: Compressing objects:  97% (36/37)[Kremote: Compressing objects: 100% (37/37)[Kremote: Compressing objects: 100% (37/37), done.[K
+ DEBUG [50e668a5] 	Receiving objects:   0% (1/138)   Receiving objects:   1% (2/138)   Receiving objects:   2% (3/138)   Receiving objects:   3% (5/138)   Receiving objects:   4% (6/138)   
+ DEBUG [50e668a5] 	Receiving objects:   5% (7/138)   Receiving objects:   6% (9/138)   
+ DEBUG [50e668a5] 	Receiving objects:   7% (10/138)   
+ DEBUG [50e668a5] 	Receiving objects:   8% (12/138)   
+ DEBUG [50e668a5] 	Receiving objects:   9% (13/138)   Receiving objects:  10% (14/138)   
+ DEBUG [50e668a5] 	Receiving objects:  11% (16/138)   
+ DEBUG [50e668a5] 	Receiving objects:  12% (17/138)   
+ DEBUG [50e668a5] 	Receiving objects:  13% (18/138)   
+ DEBUG [50e668a5] 	Receiving objects:  14% (20/138)   
+ DEBUG [50e668a5] 	Receiving objects:  15% (21/138)   
+ DEBUG [50e668a5] 	Receiving objects:  16% (23/138)   Receiving objects:  17% (24/138)   
+ DEBUG [50e668a5] 	Receiving objects:  18% (25/138)   
+ DEBUG [50e668a5] 	Receiving objects:  19% (27/138)   Receiving objects:  20% (28/138)   
+ DEBUG [50e668a5] 	Receiving objects:  21% (29/138)   
+ DEBUG [50e668a5] 	Receiving objects:  22% (31/138)   
+ DEBUG [50e668a5] 	Receiving objects:  23% (32/138)   
+ DEBUG [50e668a5] 	Receiving objects:  24% (34/138)   Receiving objects:  25% (35/138)   
+ DEBUG [50e668a5] 	Receiving objects:  26% (36/138)   
+ DEBUG [50e668a5] 	Receiving objects:  27% (38/138)   Receiving objects:  28% (39/138)   
+ DEBUG [50e668a5] 	Receiving objects:  29% (41/138)   Receiving objects:  30% (42/138)   
+ DEBUG [50e668a5] 	Receiving objects:  31% (43/138)   
+ DEBUG [50e668a5] 	Receiving objects:  32% (45/138)   
+ DEBUG [50e668a5] 	Receiving objects:  33% (46/138)   
+ DEBUG [50e668a5] 	Receiving objects:  34% (47/138)   
+ DEBUG [50e668a5] 	Receiving objects:  35% (49/138)   
+ DEBUG [50e668a5] 	Receiving objects:  36% (50/138)   
+ DEBUG [50e668a5] 	Receiving objects:  37% (52/138)   Receiving objects:  38% (53/138)   
+ DEBUG [50e668a5] 	Receiving objects:  39% (54/138)   
+ DEBUG [50e668a5] 	Receiving objects:  40% (56/138)   
+ DEBUG [50e668a5] 	Receiving objects:  41% (57/138)   Receiving objects:  42% (58/138)   
+ DEBUG [50e668a5] 	Receiving objects:  43% (60/138)   Receiving objects:  44% (61/138)   
+ DEBUG [50e668a5] 	Receiving objects:  45% (63/138)   
+ DEBUG [50e668a5] 	Receiving objects:  46% (64/138)   
+ DEBUG [50e668a5] 	Receiving objects:  47% (65/138)   
+ DEBUG [50e668a5] 	Receiving objects:  48% (67/138)   
+ DEBUG [50e668a5] 	Receiving objects:  49% (68/138)   
+ DEBUG [50e668a5] 	Receiving objects:  50% (69/138)   
+ DEBUG [50e668a5] 	Receiving objects:  51% (71/138)   
+ DEBUG [50e668a5] 	Receiving objects:  52% (72/138)   
+ DEBUG [50e668a5] 	Receiving objects:  53% (74/138)   Receiving objects:  54% (75/138)   Receiving objects:  55% (76/138)   
+ DEBUG [50e668a5] 	Receiving objects:  56% (78/138)   Receiving objects:  57% (79/138)   
+ DEBUG [50e668a5] 	Receiving objects:  58% (81/138)   Receiving objects:  59% (82/138)   
+ DEBUG [50e668a5] 	Receiving objects:  60% (83/138)   
+ DEBUG [50e668a5] 	Receiving objects:  61% (85/138)   
+ DEBUG [50e668a5] 	Receiving objects:  62% (86/138)   
+ DEBUG [50e668a5] 	Receiving objects:  63% (87/138)   
+ DEBUG [50e668a5] 	Receiving objects:  64% (89/138)   
+ DEBUG [50e668a5] 	Receiving objects:  65% (90/138)   Receiving objects:  66% (92/138)   
+ DEBUG [50e668a5] 	Receiving objects:  67% (93/138)   Receiving objects:  68% (94/138)   
+ DEBUG [50e668a5] 	Receiving objects:  69% (96/138)   
+ DEBUG [50e668a5] 	Receiving objects:  70% (97/138)   Receiving objects:  71% (98/138)   
+ DEBUG [50e668a5] 	Receiving objects:  72% (100/138)   Receiving objects:  73% (101/138)   
+ DEBUG [50e668a5] 	Receiving objects:  74% (103/138)   Receiving objects:  75% (104/138)   
+ DEBUG [50e668a5] 	Receiving objects:  76% (105/138)   
+ DEBUG [50e668a5] 	Receiving objects:  77% (107/138)   Receiving objects:  78% (108/138)   
+ DEBUG [50e668a5] 	Receiving objects:  79% (110/138)   
+ DEBUG [50e668a5] 	Receiving objects:  80% (111/138)   Receiving objects:  81% (112/138)   
+ DEBUG [50e668a5] 	Receiving objects:  82% (114/138)   Receiving objects:  83% (115/138)   
+ DEBUG [50e668a5] 	remote: Total 138 (delta 101), reused 138 (delta 101), pack-reused 0[K
+ DEBUG [50e668a5] 	Receiving objects:  84% (116/138)   
+ DEBUG [50e668a5] 	Receiving objects:  85% (118/138)   Receiving objects:  86% (119/138)   
+ DEBUG [50e668a5] 	Receiving objects:  87% (121/138)   Receiving objects:  88% (122/138)   
+ DEBUG [50e668a5] 	Receiving objects:  89% (123/138)   
+ DEBUG [50e668a5] 	Receiving objects:  90% (125/138)   Receiving objects:  91% (126/138)   
+ DEBUG [50e668a5] 	Receiving objects:  92% (127/138)   
+ DEBUG [50e668a5] 	Receiving objects:  93% (129/138)   Receiving objects:  94% (130/138)   
+ DEBUG [50e668a5] 	Receiving objects:  95% (132/138)   
+ DEBUG [50e668a5] 	Receiving objects:  96% (133/138)   Receiving objects:  97% (134/138)   
+ DEBUG [50e668a5] 	Receiving objects:  98% (136/138)   Receiving objects:  99% (137/138)   
+ DEBUG [50e668a5] 	Receiving objects: 100% (138/138)   
+ DEBUG [50e668a5] 	Receiving objects: 100% (138/138), 217.97 KiB | 4.64 MiB/s, done.
+ DEBUG [50e668a5] 	Resolving deltas:   0% (0/101)   
+ DEBUG [50e668a5] 	Resolving deltas:   2% (3/101)   
+ DEBUG [50e668a5] 	Resolving deltas:   3% (4/101)   
+ DEBUG [50e668a5] 	Resolving deltas:   4% (5/101)   
+ DEBUG [50e668a5] 	Resolving deltas:   6% (7/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  22% (23/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  30% (31/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  33% (34/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  37% (38/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  39% (40/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  40% (41/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  41% (42/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  42% (43/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  43% (44/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  44% (45/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  45% (46/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  46% (47/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  47% (48/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  48% (49/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  49% (50/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  50% (51/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  51% (52/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  52% (53/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  53% (54/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  54% (55/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  55% (56/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  56% (57/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  57% (58/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  58% (59/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  59% (60/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  60% (61/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  61% (62/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  62% (63/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  63% (64/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  64% (65/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  65% (66/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  66% (67/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  67% (68/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  68% (69/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  69% (70/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  70% (71/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  71% (72/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  72% (73/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  73% (74/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  74% (75/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  75% (76/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  76% (77/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  77% (78/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  78% (79/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  79% (80/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  80% (81/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  81% (82/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  82% (83/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  83% (84/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  84% (85/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  85% (86/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  86% (87/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  87% (88/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  88% (89/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  89% (90/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  90% (91/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  91% (92/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  92% (93/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  93% (94/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  94% (95/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  95% (96/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  96% (97/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  97% (98/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  98% (99/101)   
+ DEBUG [50e668a5] 	Resolving deltas:  99% (100/101)   
+ DEBUG [50e668a5] 	Resolving deltas: 100% (101/101)   
+ DEBUG [50e668a5] 	Resolving deltas: 100% (101/101), completed with 60 local objects.
+ DEBUG [50e668a5] 	From https://github.com/vijayalaxmi-nayak/MetadataStore
+   7ffd6e9..94a2cb6  vn_deployment -> vn_deployment
+  INFO [50e668a5] Finished in 1.213 seconds with exit status 0 (successful).
+ DEBUG [372762ac] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [372762ac] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [372762ac] Finished in 0.469 seconds with exit status 0 (successful).
+  INFO [7c1c37f5] Running /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306100122 on 3.135.201.144
+ DEBUG [7c1c37f5] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/metadata_store_application/releases/20200306100122 )
+  INFO [7c1c37f5] Finished in 0.741 seconds with exit status 0 (successful).
+  INFO [68a033e2] Running /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306100122 on 3.135.201.144
+ DEBUG [68a033e2] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git archive vn_deployment | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/metadata_store_application/releases/20200306100122 )
+  INFO [68a033e2] Finished in 0.934 seconds with exit status 0 (successful).
+ DEBUG [94e7b84a] Running if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [94e7b84a] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/repo; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/repo'" 1>&2; false; fi
+ DEBUG [94e7b84a] Finished in 0.469 seconds with exit status 0 (successful).
+ DEBUG [3912af6f] Running /usr/bin/env git rev-list --max-count=1 vn_deployment on 3.135.201.144
+ DEBUG [3912af6f] Command: cd /home/ubuntu/apps/metadata_store_application/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-metadata_store_application-production-amagi.sh" ; /usr/bin/env git rev-list --max-count=1 vn_deployment )
+ DEBUG [3912af6f] 	94a2cb619d1f3f316f878eb38b6863708f485fb4
+ DEBUG [3912af6f] Finished in 0.742 seconds with exit status 0 (successful).
+ DEBUG [c1912d14] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306100122; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306100122'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [c1912d14] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306100122; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306100122'" 1>&2; false; fi
+ DEBUG [c1912d14] Finished in 0.470 seconds with exit status 0 (successful).
+  INFO [3f13610e] Running /usr/bin/env echo "94a2cb619d1f3f316f878eb38b6863708f485fb4" > REVISION on 3.135.201.144
+ DEBUG [3f13610e] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306100122 && /usr/bin/env echo "94a2cb619d1f3f316f878eb38b6863708f485fb4" > REVISION
+  INFO [3f13610e] Finished in 0.743 seconds with exit status 0 (successful).
+ DEBUG [a2552626] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306100122; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306100122'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [a2552626] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306100122; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306100122'" 1>&2; false; fi
+ DEBUG [a2552626] Finished in 0.741 seconds with exit status 0 (successful).
+ DEBUG [f8788681] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle on 3.135.201.144
+ DEBUG [f8788681] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306100122 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/apps/metadata_store_application/shared/bundle
+ DEBUG [f8788681] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306100122/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [f8788681] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [f8788681] 	[31mThe following gems are missing[0m
+[31m * net-ssh (5.2.0)[0m
+ DEBUG [f8788681] 	[31m * net-scp (2.0.0)[0m
+[31m * sshkit (1.21.0)[0m
+ DEBUG [f8788681] 	[31m * airbrussh (1.4.0)[0m
+[31m * byebug (11.0.1)[0m
+ DEBUG [f8788681] 	[31m * capistrano (3.12.0)[0m
+ DEBUG [f8788681] 	[31m * capistrano-bundler (1.6.0)[0m
+ DEBUG [f8788681] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [f8788681] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [f8788681] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [f8788681] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [f8788681] 	[31m * factory_bot (5.1.1)[0m
+ DEBUG [f8788681] 	[31m * factory_bot_rails (5.1.1)[0m
+ DEBUG [f8788681] 	[31m * ffi (1.12.2)[0m
+ DEBUG [f8788681] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [f8788681] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [f8788681] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [f8788681] 	[31m * listen (3.1.5)[0m
+ DEBUG [f8788681] 	[31m * rspec-support (3.9.2)[0m
+ DEBUG [f8788681] 	[31m * rspec-core (3.9.1)[0m
+ DEBUG [f8788681] 	[31m * rspec-expectations (3.9.0)[0m
+ DEBUG [f8788681] 	[31m * rspec-mocks (3.9.1)[0m
+ DEBUG [f8788681] 	[31m * rspec-rails (3.9.0)[0m
+ DEBUG [f8788681] 	[31m * spring (2.0.2)[0m
+ DEBUG [f8788681] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [f8788681] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [f8788681] Finished in 1.605 seconds with exit status 1 (failed).
+  INFO [3cfbb818] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet on 3.135.201.144
+ DEBUG [3cfbb818] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306100122 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/apps/metadata_store_application/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [3cfbb818] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306100122/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+  INFO [3cfbb818] Finished in 1.660 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [1cb4d782] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306100122; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306100122'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [1cb4d782] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases/20200306100122; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases/20200306100122'" 1>&2; false; fi
+ DEBUG [1cb4d782] Finished in 0.738 seconds with exit status 0 (successful).
+  INFO [256de511] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 3.135.201.144
+ DEBUG [256de511] Command: cd /home/ubuntu/apps/metadata_store_application/releases/20200306100122 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [256de511] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/releases/20200306100122/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+  INFO [256de511] Finished in 2.861 seconds with exit status 0 (successful).
+  INFO [05cb2876] Running /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/releases/20200306100122 /home/ubuntu/apps/metadata_store_application/releases/current on 3.135.201.144
+ DEBUG [05cb2876] Command: /usr/bin/env ln -s /home/ubuntu/apps/metadata_store_application/releases/20200306100122 /home/ubuntu/apps/metadata_store_application/releases/current
+  INFO [05cb2876] Finished in 0.747 seconds with exit status 0 (successful).
+  INFO [d91931b3] Running /usr/bin/env mv /home/ubuntu/apps/metadata_store_application/releases/current /home/ubuntu/apps/metadata_store_application on 3.135.201.144
+ DEBUG [d91931b3] Command: /usr/bin/env mv /home/ubuntu/apps/metadata_store_application/releases/current /home/ubuntu/apps/metadata_store_application
+  INFO [d91931b3] Finished in 0.743 seconds with exit status 0 (successful).
+ DEBUG [1b914c9a] Running /usr/bin/env ls -x /home/ubuntu/apps/metadata_store_application/releases on 3.135.201.144
+ DEBUG [1b914c9a] Command: /usr/bin/env ls -x /home/ubuntu/apps/metadata_store_application/releases
+ DEBUG [1b914c9a] 	20200306091416	20200306091849	20200306093206	20200306094744	20200306095101
+20200306100122
+ DEBUG [1b914c9a] Finished in 0.743 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 3.135.201.144
+ DEBUG [6c35b7bb] Running [ -d /home/ubuntu/apps/metadata_store_application/current ] on 3.135.201.144
+ DEBUG [6c35b7bb] Command: [ -d /home/ubuntu/apps/metadata_store_application/current ]
+ DEBUG [6c35b7bb] Finished in 0.741 seconds with exit status 0 (successful).
+ DEBUG [693d557f] Running /usr/bin/env readlink /home/ubuntu/apps/metadata_store_application/current on 3.135.201.144
+ DEBUG [693d557f] Command: /usr/bin/env readlink /home/ubuntu/apps/metadata_store_application/current
+ DEBUG [693d557f] 	/home/ubuntu/apps/metadata_store_application/releases/20200306100122
+ DEBUG [693d557f] Finished in 0.741 seconds with exit status 0 (successful).
+  INFO [d0a63808] Running /usr/bin/env rm -rf /home/ubuntu/apps/metadata_store_application/releases/20200306091416 on 3.135.201.144
+ DEBUG [d0a63808] Command: /usr/bin/env rm -rf /home/ubuntu/apps/metadata_store_application/releases/20200306091416
+  INFO [d0a63808] Finished in 0.785 seconds with exit status 0 (successful).
+  INFO [f6a99138] Running mkdir /home/ubuntu/apps/metadata_store_application/shared/tmp/sockets -p on 3.135.201.144
+ DEBUG [f6a99138] Command: mkdir /home/ubuntu/apps/metadata_store_application/shared/tmp/sockets -p
+  INFO [f6a99138] Finished in 0.740 seconds with exit status 0 (successful).
+  INFO [66b8454f] Running mkdir /home/ubuntu/apps/metadata_store_application/shared/tmp/pids -p on 3.135.201.144
+ DEBUG [66b8454f] Command: mkdir /home/ubuntu/apps/metadata_store_application/shared/tmp/pids -p
+  INFO [66b8454f] Finished in 0.745 seconds with exit status 0 (successful).
+ DEBUG [294d5432] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ] on 3.135.201.144
+ DEBUG [294d5432] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/puma.rb ]
+ DEBUG [294d5432] Finished in 0.742 seconds with exit status 0 (successful).
+  INFO using conf file /home/ubuntu/apps/metadata_store_application/shared/puma.rb
+ DEBUG [56d3f118] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/tmp/pids/puma.pid ] on 3.135.201.144
+ DEBUG [56d3f118] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/tmp/pids/puma.pid ]
+ DEBUG [56d3f118] Finished in 0.743 seconds with exit status 1 (failed).
+ DEBUG [df1e71d8] Running if test ! -d /home/ubuntu/apps/metadata_store_application/current; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/current'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [df1e71d8] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/current; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/current'" 1>&2; false; fi
+ DEBUG [df1e71d8] Finished in 0.745 seconds with exit status 0 (successful).
+  INFO [bbfe19de] Running ~/.rvm/bin/rvm default do bundle exec puma -C /home/ubuntu/apps/metadata_store_application/shared/puma.rb --daemon on 3.135.201.144
+ DEBUG [bbfe19de] Command: cd /home/ubuntu/apps/metadata_store_application/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec puma -C /home/ubuntu/apps/metadata_store_application/shared/puma.rb --daemon )
+ DEBUG [bbfe19de] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/apps/metadata_store_application/current/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [bbfe19de] 	Puma starting in single mode...
+* Version 3.12.2 (ruby 2.3.8-p459), codename: Llamas in Pajamas
+* Min threads: 4, max threads: 16
+* Environment: production
+ DEBUG [bbfe19de] 	
+* Daemonizing...
+  INFO [bbfe19de] Finished in 1.457 seconds with exit status 0 (successful).
+ DEBUG [8085201f] Running if test ! -d /home/ubuntu/apps/metadata_store_application/current; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/current'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [8085201f] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/current; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/current'" 1>&2; false; fi
+ DEBUG [8085201f] Finished in 0.747 seconds with exit status 0 (successful).
+ DEBUG [e20e37cb] Running [ -f /home/ubuntu/apps/metadata_store_application/shared/tmp/pids/puma.pid ] on 3.135.201.144
+ DEBUG [e20e37cb] Command: [ -f /home/ubuntu/apps/metadata_store_application/shared/tmp/pids/puma.pid ]
+ DEBUG [e20e37cb] Finished in 0.743 seconds with exit status 1 (failed).
+ DEBUG [9a70f0d5] Running if test ! -d /home/ubuntu/apps/metadata_store_application/releases; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases'" 1>&2; false; fi on 3.135.201.144
+ DEBUG [9a70f0d5] Command: if test ! -d /home/ubuntu/apps/metadata_store_application/releases; then echo "Directory does not exist '/home/ubuntu/apps/metadata_store_application/releases'" 1>&2; false; fi
+ DEBUG [9a70f0d5] Finished in 0.743 seconds with exit status 0 (successful).
+  INFO [3dc2cae8] Running /usr/bin/env echo "Branch vn_deployment (at 94a2cb619d1f3f316f878eb38b6863708f485fb4) deployed as release 20200306100122 by amagi" >> /home/ubuntu/apps/metadata_store_application/revisions.log on 3.135.201.144
+ DEBUG [3dc2cae8] Command: cd /home/ubuntu/apps/metadata_store_application/releases && /usr/bin/env echo "Branch vn_deployment (at 94a2cb619d1f3f316f878eb38b6863708f485fb4) deployed as release 20200306100122 by amagi" >> /home/ubuntu/apps/metadata_store_application/revisions.log
+  INFO [3dc2cae8] Finished in 0.744 seconds with exit status 0 (successful).
