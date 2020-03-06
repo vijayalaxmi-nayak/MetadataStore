@@ -1,7 +1,7 @@
 # Change these
 server '3.135.201.144', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'https://github.com/vijayalaxmi-nayak/Metadata-Store-application'
+set :repo_url,        'https://github.com/vijayalaxmi-nayak/MetadataStore'
 set :application,     'metadata_store_application'
 set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
