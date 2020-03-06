@@ -141,8 +141,8 @@ params[:duration].present?
         offset = params[:offset] if params[:offset].present?
         medias = medias.offset(offset).limit(10)
         if medias == []
-          render json: { status: 'NOT FOUND', message: 'Desired media file does
-not exists' }, status: :ok
+          render json: { status: 'NOT FOUND', message: 
+'Desired media file does not exists' }, status: :ok
         else
           render json: { status: 'SUCCESS', message: 'Loaded medias', data:
 medias }, status: :ok
@@ -226,8 +226,8 @@ media.errors }, status: :unprocessable_entity
       def show
         media = Media.find_by_asset_id(params[:id])
         if media.nil?
-          render json: { status: 'NOT FOUND', message: 'Desired asset_id of
-Media does not exists' }, status: :ok
+          render json: { status: 'NOT FOUND', message: 
+'Desired asset_id of Media does not exists' }, status: :ok
         else
           render json: { status: 'SUCCESS', message: 'Loaded Media', data:
 media }, status: :ok
