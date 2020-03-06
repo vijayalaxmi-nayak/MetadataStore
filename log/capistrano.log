@@ -1,0 +1,394 @@
+# Logfile created on 2020-03-06 10:41:59 +0530 by logger.rb/56438
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 10:41:59 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [deacfd49] Running [ -d ~/.rvm ] on 3.135.211.179
+ DEBUG [deacfd49] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 10:45:52 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8fcd8e52] Running [ -d ~/.rvm ] on 3.135.211.179
+ DEBUG [8fcd8e52] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 10:47:39 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ec84c99c] Running [ -d ~/.rvm ] on 3.135.211.179
+ DEBUG [ec84c99c] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 10:47:52 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [50d998b6] Running [ -d ~/.rvm ] on 3.135.211.179
+ DEBUG [50d998b6] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 10:53:32 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d720ed65] Running [ -d ~/.rvm ] on 10.0.5.116
+ DEBUG [d720ed65] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 10:53:54 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [63dc47a2] Running [ -d ~/.rvm ] on 10.0.5.116
+ DEBUG [63dc47a2] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 10:54:18 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [22f4268d] Running [ -d ~/.rvm ] on 10.0.5.116
+ DEBUG [22f4268d] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 10:58:52 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1a111ea8] Running [ -d ~/.rvm ] on 3.135.211.179
+ DEBUG [1a111ea8] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 11:06:39 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0b694ec3] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [0b694ec3] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 11:09:52 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c77de1f3] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [c77de1f3] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 11:27:52 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a11c4567] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [a11c4567] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 11:28:20 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b30fc71c] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [b30fc71c] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 11:29:51 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2c87a3db] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [2c87a3db] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 11:38:48 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a62401fb] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [a62401fb] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 11:51:08 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6dd3d635] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [6dd3d635] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 11:53:37 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [30cdef23] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [30cdef23] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 11:54:01 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f1c980d4] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [f1c980d4] Command: [ -d ~/.rvm ]
+ DEBUG [f1c980d4] Finished in 3.327 seconds with exit status 0 (successful).
+ DEBUG [5cca82a2] Running ~/.rvm/bin/rvm version on 3.21.104.30
+ DEBUG [5cca82a2] Command: ~/.rvm/bin/rvm version
+ DEBUG [5cca82a2] 	bash: /home/ubuntu/.rvm/bin/rvm: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 12:33:32 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8fae5feb] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [8fae5feb] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 12:39:48 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a0449333] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [a0449333] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 12:40:58 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7301a46e] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [7301a46e] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 12:43:54 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8bc3f605] Running [ -d ~/.rvm ] on 3.21.104.30
+ DEBUG [8bc3f605] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 12:46:53 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [38ce8901] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [38ce8901] Command: [ -d ~/.rvm ]
+ DEBUG [38ce8901] Finished in 3.576 seconds with exit status 0 (successful).
+ DEBUG [104b24a6] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [104b24a6] Command: ~/.rvm/bin/rvm version
+ DEBUG [104b24a6] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [104b24a6] Finished in 0.987 seconds with exit status 0 (successful).
+ DEBUG [6703903d] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [6703903d] Command: ~/.rvm/bin/rvm current
+ DEBUG [6703903d] 	ruby-2.3.8
+ DEBUG [6703903d] Finished in 0.980 seconds with exit status 0 (successful).
+ DEBUG [c716e128] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [c716e128] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [c716e128] 	/home/ubuntu/.rvm/scripts/set: line 19: exec: ruby: not found
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 12:50:09 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [67587227] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [67587227] Command: [ -d ~/.rvm ]
+ DEBUG [67587227] Finished in 3.929 seconds with exit status 0 (successful).
+ DEBUG [d95637a2] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [d95637a2] Command: ~/.rvm/bin/rvm version
+ DEBUG [d95637a2] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [d95637a2] Finished in 1.061 seconds with exit status 0 (successful).
+ DEBUG [e745ff12] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [e745ff12] Command: ~/.rvm/bin/rvm current
+ DEBUG [e745ff12] 	ruby-2.3.8
+ DEBUG [e745ff12] Finished in 1.053 seconds with exit status 0 (successful).
+ DEBUG [54c4b228] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [54c4b228] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [54c4b228] 	/home/ubuntu/.rvm/scripts/set: line 19: exec: ruby: not found
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 12:53:51 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1bec7573] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [1bec7573] Command: [ -d ~/.rvm ]
+ DEBUG [1bec7573] Finished in 3.647 seconds with exit status 0 (successful).
+ DEBUG [870287f5] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [870287f5] Command: ~/.rvm/bin/rvm version
+ DEBUG [870287f5] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [870287f5] Finished in 0.994 seconds with exit status 0 (successful).
+ DEBUG [e93eef50] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [e93eef50] Command: ~/.rvm/bin/rvm current
+ DEBUG [e93eef50] 	ruby-2.3.8
+ DEBUG [e93eef50] Finished in 0.984 seconds with exit status 0 (successful).
+ DEBUG [63c4d39f] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [63c4d39f] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [63c4d39f] 	/home/ubuntu/.rvm/scripts/set: line 19: exec: ruby: not found
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 12:54:54 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ab843727] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [ab843727] Command: [ -d ~/.rvm ]
+ DEBUG [ab843727] Finished in 3.814 seconds with exit status 0 (successful).
+ DEBUG [52932b2f] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [52932b2f] Command: ~/.rvm/bin/rvm version
+ DEBUG [52932b2f] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [52932b2f] Finished in 1.038 seconds with exit status 0 (successful).
+ DEBUG [43a3dfb4] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [43a3dfb4] Command: ~/.rvm/bin/rvm current
+ DEBUG [43a3dfb4] 	ruby-2.3.8
+ DEBUG [43a3dfb4] Finished in 1.046 seconds with exit status 0 (successful).
+ DEBUG [194a8c73] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [194a8c73] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [194a8c73] 	/home/ubuntu/.rvm/scripts/set: line 19: exec: ruby: not found
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 12:56:07 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [28b7a7c5] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [28b7a7c5] Command: [ -d ~/.rvm ]
+ DEBUG [28b7a7c5] Finished in 3.982 seconds with exit status 0 (successful).
+ DEBUG [bcb0177e] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [bcb0177e] Command: ~/.rvm/bin/rvm version
+ DEBUG [bcb0177e] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [bcb0177e] Finished in 1.066 seconds with exit status 0 (successful).
+ DEBUG [2a78deb6] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [2a78deb6] Command: ~/.rvm/bin/rvm current
+ DEBUG [2a78deb6] 	ruby-2.3.8
+ DEBUG [2a78deb6] Finished in 1.060 seconds with exit status 0 (successful).
+ DEBUG [359b4b5b] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [359b4b5b] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [359b4b5b] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [359b4b5b] Finished in 1.194 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 12:57:45 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [92a4513d] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [92a4513d] Command: [ -d ~/.rvm ]
+ DEBUG [92a4513d] Finished in 3.919 seconds with exit status 0 (successful).
+ DEBUG [32044533] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [32044533] Command: ~/.rvm/bin/rvm version
+ DEBUG [32044533] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [32044533] Finished in 1.065 seconds with exit status 0 (successful).
+ DEBUG [143f35f1] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [143f35f1] Command: ~/.rvm/bin/rvm current
+ DEBUG [143f35f1] 	ruby-2.3.8
+ DEBUG [143f35f1] Finished in 1.035 seconds with exit status 0 (successful).
+ DEBUG [6e83cceb] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [6e83cceb] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [6e83cceb] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [6e83cceb] Finished in 1.168 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 13:00:39 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4d656558] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [4d656558] Command: [ -d ~/.rvm ]
+ DEBUG [4d656558] Finished in 3.546 seconds with exit status 0 (successful).
+ DEBUG [a3d50a37] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [a3d50a37] Command: ~/.rvm/bin/rvm version
+ DEBUG [a3d50a37] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [a3d50a37] Finished in 0.959 seconds with exit status 0 (successful).
+ DEBUG [f3031888] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [f3031888] Command: ~/.rvm/bin/rvm current
+ DEBUG [f3031888] 	ruby-2.3.8
+ DEBUG [f3031888] Finished in 0.937 seconds with exit status 0 (successful).
+ DEBUG [944d8fe9] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [944d8fe9] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [944d8fe9] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [944d8fe9] Finished in 1.077 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 13:01:37 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c73e5542] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [c73e5542] Command: [ -d ~/.rvm ]
+ DEBUG [c73e5542] Finished in 3.443 seconds with exit status 0 (successful).
+ DEBUG [b97283eb] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [b97283eb] Command: ~/.rvm/bin/rvm version
+ DEBUG [b97283eb] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [b97283eb] Finished in 0.941 seconds with exit status 0 (successful).
+ DEBUG [d2ee7abb] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [d2ee7abb] Command: ~/.rvm/bin/rvm current
+ DEBUG [d2ee7abb] 	ruby-2.3.8
+ DEBUG [d2ee7abb] Finished in 0.937 seconds with exit status 0 (successful).
+ DEBUG [02c3749d] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [02c3749d] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [02c3749d] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [02c3749d] Finished in 1.067 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 13:04:08 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d6c59f41] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [d6c59f41] Command: [ -d ~/.rvm ]
+ DEBUG [d6c59f41] Finished in 3.923 seconds with exit status 0 (successful).
+ DEBUG [20c3040c] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [20c3040c] Command: ~/.rvm/bin/rvm version
+ DEBUG [20c3040c] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [20c3040c] Finished in 1.061 seconds with exit status 0 (successful).
+ DEBUG [655c0695] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [655c0695] Command: ~/.rvm/bin/rvm current
+ DEBUG [655c0695] 	ruby-2.3.8
+ DEBUG [655c0695] Finished in 1.053 seconds with exit status 0 (successful).
+ DEBUG [26bed29d] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [26bed29d] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [26bed29d] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [26bed29d] Finished in 1.189 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 13:04:59 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6b57e00c] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [6b57e00c] Command: [ -d ~/.rvm ]
+ DEBUG [6b57e00c] Finished in 3.855 seconds with exit status 0 (successful).
+ DEBUG [bc32db87] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [bc32db87] Command: ~/.rvm/bin/rvm version
+ DEBUG [bc32db87] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [bc32db87] Finished in 1.038 seconds with exit status 0 (successful).
+ DEBUG [a4e7584c] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [a4e7584c] Command: ~/.rvm/bin/rvm current
+ DEBUG [a4e7584c] 	ruby-2.3.8
+ DEBUG [a4e7584c] Finished in 1.030 seconds with exit status 0 (successful).
+ DEBUG [49db9958] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [49db9958] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [49db9958] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [49db9958] Finished in 1.174 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 13:05:24 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a3410075] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [a3410075] Command: [ -d ~/.rvm ]
+ DEBUG [a3410075] Finished in 3.775 seconds with exit status 0 (successful).
+ DEBUG [35db7429] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [35db7429] Command: ~/.rvm/bin/rvm version
+ DEBUG [35db7429] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [35db7429] Finished in 1.025 seconds with exit status 0 (successful).
+ DEBUG [0d87ac00] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [0d87ac00] Command: ~/.rvm/bin/rvm current
+ DEBUG [0d87ac00] 	ruby-2.3.8
+ DEBUG [0d87ac00] Finished in 1.031 seconds with exit status 0 (successful).
+ DEBUG [6f5a1298] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [6f5a1298] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [6f5a1298] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [6f5a1298] Finished in 1.156 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 13:07:23 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [09b4ce55] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [09b4ce55] Command: [ -d ~/.rvm ]
+ DEBUG [09b4ce55] Finished in 3.609 seconds with exit status 0 (successful).
+ DEBUG [35464965] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [35464965] Command: ~/.rvm/bin/rvm version
+ DEBUG [35464965] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [35464965] Finished in 0.980 seconds with exit status 0 (successful).
+ DEBUG [a2c07151] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [a2c07151] Command: ~/.rvm/bin/rvm current
+ DEBUG [a2c07151] 	ruby-2.3.8
+ DEBUG [a2c07151] Finished in 0.973 seconds with exit status 0 (successful).
+ DEBUG [9d215a4a] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [9d215a4a] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [9d215a4a] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [9d215a4a] Finished in 1.094 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 13:10:43 +0530 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [28cea953] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [28cea953] Command: [ -d ~/.rvm ]
+ DEBUG [28cea953] Finished in 3.837 seconds with exit status 0 (successful).
+ DEBUG [5229718c] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [5229718c] Command: ~/.rvm/bin/rvm version
+ DEBUG [5229718c] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [5229718c] Finished in 1.040 seconds with exit status 0 (successful).
+ DEBUG [51920448] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [51920448] Command: ~/.rvm/bin/rvm current
+ DEBUG [51920448] 	ruby-2.3.8
+ DEBUG [51920448] Finished in 1.035 seconds with exit status 0 (successful).
+ DEBUG [e2ee136c] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [e2ee136c] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [e2ee136c] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [e2ee136c] Finished in 1.165 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 13:12:27 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ceefeb80] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [ceefeb80] Command: [ -d ~/.rvm ]
+ DEBUG [ceefeb80] Finished in 3.430 seconds with exit status 0 (successful).
+ DEBUG [3f649b8a] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [3f649b8a] Command: ~/.rvm/bin/rvm version
+ DEBUG [3f649b8a] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [3f649b8a] Finished in 0.938 seconds with exit status 0 (successful).
+ DEBUG [1018ecca] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [1018ecca] Command: ~/.rvm/bin/rvm current
+ DEBUG [1018ecca] 	ruby-2.3.8
+ DEBUG [1018ecca] Finished in 0.942 seconds with exit status 0 (successful).
+ DEBUG [be839e15] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [be839e15] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [be839e15] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [be839e15] Finished in 1.072 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 13:22:51 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a5ecb31f] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [a5ecb31f] Command: [ -d ~/.rvm ]
+ DEBUG [a5ecb31f] Finished in 3.694 seconds with exit status 0 (successful).
+ DEBUG [fb5eecb2] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [fb5eecb2] Command: ~/.rvm/bin/rvm version
+ DEBUG [fb5eecb2] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [fb5eecb2] Finished in 1.007 seconds with exit status 0 (successful).
+ DEBUG [022fc881] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [022fc881] Command: ~/.rvm/bin/rvm current
+ DEBUG [022fc881] 	ruby-2.3.8
+ DEBUG [022fc881] Finished in 0.997 seconds with exit status 0 (successful).
+ DEBUG [593f054a] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [593f054a] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [593f054a] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [593f054a] Finished in 1.133 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-03-06 13:24:37 +0530 cap production deploy:initial BRANCH=vn_deployment
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e6e65819] Running [ -d ~/.rvm ] on 3.135.201.144
+ DEBUG [e6e65819] Command: [ -d ~/.rvm ]
+ DEBUG [e6e65819] Finished in 3.476 seconds with exit status 0 (successful).
+ DEBUG [77f293cb] Running ~/.rvm/bin/rvm version on 3.135.201.144
+ DEBUG [77f293cb] Command: ~/.rvm/bin/rvm version
+ DEBUG [77f293cb] 	rvm 1.29.9-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [77f293cb] Finished in 0.945 seconds with exit status 0 (successful).
+ DEBUG [bc060290] Running ~/.rvm/bin/rvm current on 3.135.201.144
+ DEBUG [bc060290] Command: ~/.rvm/bin/rvm current
+ DEBUG [bc060290] 	ruby-2.3.8
+ DEBUG [bc060290] Finished in 0.946 seconds with exit status 0 (successful).
+ DEBUG [416e4b36] Running ~/.rvm/bin/rvm default do ruby --version on 3.135.201.144
+ DEBUG [416e4b36] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [416e4b36] 	ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-linux]
+ DEBUG [416e4b36] Finished in 1.069 seconds with exit status 0 (successful).

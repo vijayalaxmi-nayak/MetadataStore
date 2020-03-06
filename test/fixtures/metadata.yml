@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  asset_id_meta: MyString
+  title: MyString
+  duration: 2020-02-25 17:45:17
+  location: MyString
+  recorded_time: 2020-02-25 17:45:17
+
+two:
+  asset_id_meta: MyString
+  title: MyString
+  duration: 2020-02-25 17:45:17
+  location: MyString
+  recorded_time: 2020-02-25 17:45:17
