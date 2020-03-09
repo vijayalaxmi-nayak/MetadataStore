@@ -316,9 +316,10 @@ del_media }, status: :ok
         saved = []
         unsaved = []
         # CSV.foreach(params[:id], headers: true) do |row| 
-        csv_text = File.open(params[:id])
-        csv = CSV.parse(csv_text, :headers => true)
-        csv.each do |row|
+        CSV.new(open(params[:id]), :headers => :first_row).each do |row|
+        #csv_text = File.open(params[:id])
+        #csv = CSV.parse(csv_text, :headers => true)
+        #csv.each do |row|
           # byebug
           print "\n-----------\n"
           print row
