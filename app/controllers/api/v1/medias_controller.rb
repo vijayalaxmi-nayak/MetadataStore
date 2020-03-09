@@ -3,6 +3,8 @@ module Api
   module V1
     class MediasController < AccountsController
       require 'csv'
+      require 'iconv'
+      require 'open-uri'
 
       # displays the medias based on filters
       api :GET, '/medias/', 'Displays medias based on filters'
@@ -313,8 +315,14 @@ del_media }, status: :ok
       def update
         saved = []
         unsaved = []
-        CSV.foreach(params[:id], headers: true) do |row|
+        # CSV.foreach(params[:id], headers: true) do |row| 
+        csv_text = File.open(params[:id])
+        csv = CSV.parse(csv_text, :headers => true)
+        csv.each do |row|
           # byebug
+          print "\n-----------\n"
+          print row
+          print "\n-----------\n"
           hash_value = row.to_hash
           if Media.exists? asset_id: hash_value['asset_id']
             type = Media.where(asset_id:
