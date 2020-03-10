@@ -5,6 +5,7 @@ module Api
       require 'csv'
       require 'iconv'
       require 'open-uri'
+      require 'aws-sdk'
 
       # displays the medias based on filters
       api :GET, '/medias/', 'Displays medias based on filters'
@@ -314,37 +315,43 @@ del_media }, status: :ok
       )
       def update
         saved = []
-        unsaved = []
-        # CSV.foreach(params[:id], headers: true) do |row| 
-        CSV.new(open(params[:id]), :headers => :first_row).each do |row|
-        #csv_text = File.open(params[:id])
-        #csv = CSV.parse(csv_text, :headers => true)
-        #csv.each do |row|
-          # byebug
-          print "\n-----------\n"
-          print row
-          print "\n-----------\n"
-          hash_value = row.to_hash
-          if Media.exists? asset_id: hash_value['asset_id']
-            type = Media.where(asset_id:
-hash_value['asset_id']).pluck(:media_type)[0]
+        #unsaved = []
+        access_key_id =  ENV['AWS_ACCESS_KEY_ID']
+        secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
+        bucket_name = "prajnarails"
+        s3 = Aws::S3::Client.new(region: 'us-east-2', access_key_id: access_key_id, secret_access_key: secret_access_key)
+        resp = s3.get_object({
+        bucket: bucket_name,
+        key: "meta.csv"
+        })
+        result = resp.body.read
+        csv = CSV.parse(result, :headers => true)
+        csv.each do |row|
+          asset_id = row[0]
+          title = row[1]
+          duration = row[2]
+          location = row[3]
+          recorded_time = row[4]
+          if Media.exists? asset_id: asset_id
+            type = Media.where(asset_id: asset_id).pluck(:media_type)[0]
             if type == 'audio'
-              hash_value['timecode'] =
-Audio.duration_tc(hash_value['duration'].to_i)
+              timecode =
+Audio.duration_tc(duration.to_i)
             elsif type == 'video'
-              hash_value['timecode'] =
-Video.duration_tc(hash_value['duration'].to_i)
+              timecode =
+Video.duration_tc(duration.to_i)
             end
-            metadata = Media.find_by_asset_id(hash_value['asset_id'])
+            metadata = Media.find_by_asset_id(asset_id)
+            hash_value =  { asset_id: asset_id, title: title, duration: duration, location: location, recorded_time: recorded_time, timecode: timecode }
             if metadata.update_attributes(hash_value)
               saved.append(hash_value)
             end
-          else
-            unsaved.append(hash_value)
+          #else
+            #unsaved.append(hash_value)
           end
         end
         render json: { status: 'SUCCESS', message: 'Loaded metadata',
-saved_data: saved, unsaved_data: unsaved }, status: :ok
+saved_data: saved }, status: :ok
       end
 
       private

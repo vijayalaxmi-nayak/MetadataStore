@@ -29880,3 +29880,327 @@ Processing by Api::V1::MediasController#update as */*
 Completed 200 OK in 9058ms (Views: 600.9ms | ActiveRecord: 95.9ms)
 
 
+Started PUT "/api/v1/medias" for ::1 at 2020-03-10 17:50:23 +0530
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/amagi/.rvm/gems/ruby-2.3.8/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/amagi/.rvm/gems/ruby-2.3.8/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/amagi/project1/MetadataStore/app/controllers/api/v1/medias_controller.rb:330: syntax error, unexpected ':', expecting keyword_end
+          asset_id: row[0]
+                   ^
+/home/amagi/project1/MetadataStore/app/controllers/api/v1/medias_controller.rb:331: syntax error, unexpected ':', expecting keyword_end
+          title: row[1]
+                ^
+/home/amagi/project1/MetadataStore/app/controllers/api/v1/medias_controller.rb:332: syntax error, unexpected ':', expecting keyword_end
+          duration: row[2]
+                   ^
+/home/amagi/project1/MetadataStore/app/controllers/api/v1/medias_controller.rb:333: syntax error, unexpected ':', expecting keyword_end
+          location: row[3]
+                   ^
+/home/amagi/project1/MetadataStore/app/controllers/api/v1/medias_controller.rb:334: syntax error, unexpected ':', expecting keyword_end
+          recorded_time: row[4]
+                        ^):
+  
+app/controllers/api/v1/medias_controller.rb:330: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/medias_controller.rb:331: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/medias_controller.rb:332: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/medias_controller.rb:333: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/medias_controller.rb:334: syntax error, unexpected ':', expecting keyword_end
+Started PUT "/api/v1/medias" for ::1 at 2020-03-10 17:51:20 +0530
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/amagi/.rvm/gems/ruby-2.3.8/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/amagi/.rvm/gems/ruby-2.3.8/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::MediasController#update as */*
+  Parameters: {"id"=>"https://prajnarails.s3.us-east-2.amazonaws.com/meta.csv", "media"=>{}}
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'VA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'VB100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+Completed 500 Internal Server Error in 1776ms (ActiveRecord: 2.0ms)
+
+
+  
+NameError (undefined local variable or method `media_type' for #<Api::V1::MediasController:0x00000000044108f8>):
+  
+app/controllers/api/v1/medias_controller.rb:336:in `block in update'
+app/controllers/api/v1/medias_controller.rb:329:in `update'
+Started PUT "/api/v1/medias" for ::1 at 2020-03-10 17:53:31 +0530
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/amagi/.rvm/gems/ruby-2.3.8/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/amagi/.rvm/gems/ruby-2.3.8/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::MediasController#update as */*
+  Parameters: {"id"=>"https://prajnarails.s3.us-east-2.amazonaws.com/meta.csv", "media"=>{}}
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'VA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'VB100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AA100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AA100' AND `media`.`asset_id` != 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Update (0.5ms)[0m  [1m[33mUPDATE `media` SET `duration` = 60, `timecode` = '00:00:00.60', `updated_at` = '2020-03-10 12:23:33' WHERE `media`.`asset_id` = 'AA100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (37.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AB100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AB100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.3ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AB100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AB100' AND `media`.`asset_id` != 'AB100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AS100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AS100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AS100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AS100' AND `media`.`asset_id` != 'AS100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AA100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AA100' AND `media`.`asset_id` != 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Update (0.7ms)[0m  [1m[33mUPDATE `media` SET `duration` = 254, `timecode` = '00:00:00.254' WHERE `media`.`asset_id` = 'AA100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (35.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AD100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AD100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AD100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AD100' AND `media`.`asset_id` != 'AD100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AF100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AF100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.3ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AF100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AF100' AND `media`.`asset_id` != 'AF100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AG100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AG100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.3ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AG100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AG100' AND `media`.`asset_id` != 'AG100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AH100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AH100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AH100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mCACHE Account Load (0.1ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AH100' AND `media`.`asset_id` != 'AH100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AK100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AK100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AK100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AK100' AND `media`.`asset_id` != 'AK100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AA100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AA100' AND `media`.`asset_id` != 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Update (0.4ms)[0m  [1m[33mUPDATE `media` SET `duration` = 203, `timecode` = '00:00:00.203', `updated_at` = '2020-03-10 12:23:34' WHERE `media`.`asset_id` = 'AA100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (32.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AL100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AL100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (2.0ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AL100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AL100' AND `media`.`asset_id` != 'AL100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AQ100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[36mMedia Exists (4.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AA100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.5ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AA100' AND `media`.`asset_id` != 'AA100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Update (0.4ms)[0m  [1m[33mUPDATE `media` SET `duration` = 9982, `timecode` = '00:00:09.982' WHERE `media`.`asset_id` = 'AA100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AW100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AW100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.3ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AW100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AW100' AND `media`.`asset_id` != 'AW100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AE100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AE100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.3ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AE100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AE100' AND `media`.`asset_id` != 'AE100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AI100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AI100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AI100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AI100' AND `media`.`asset_id` != 'AI100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AO100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AO100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AO100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AO100' AND `media`.`asset_id` != 'AO100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AP100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AP100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AP100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AP100' AND `media`.`asset_id` != 'AP100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = 'AC100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:335
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `media`.`media_type` FROM `media` WHERE `media`.`asset_id` = 'AC100'[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:336
+  [1m[36mMedia Load (0.4ms)[0m  [1m[34mSELECT  `media`.* FROM `media` WHERE `media`.`asset_id` = 'AC100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:344
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[36mMedia Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `media` WHERE `media`.`asset_id` = BINARY 'AC100' AND `media`.`asset_id` != 'AC100' LIMIT 1[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/medias_controller.rb:346
+Completed 200 OK in 2092ms (Views: 1.9ms | ActiveRecord: 195.1ms)
+
+
