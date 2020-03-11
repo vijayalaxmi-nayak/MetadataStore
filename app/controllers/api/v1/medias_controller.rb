@@ -315,14 +315,13 @@ del_media }, status: :ok
       )
       def update
         saved = []
-        #unsaved = []
         access_key_id =  ENV['AWS_ACCESS_KEY_ID']
         secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
         bucket_name = "prajnarails"
         s3 = Aws::S3::Client.new(region: 'us-east-2', access_key_id: access_key_id, secret_access_key: secret_access_key)
         resp = s3.get_object({
         bucket: bucket_name,
-        key: "meta.csv"
+        key: params[:id]
         })
         result = resp.body.read
         csv = CSV.parse(result, :headers => true)
@@ -346,8 +345,6 @@ Video.duration_tc(duration.to_i)
             if metadata.update_attributes(hash_value)
               saved.append(hash_value)
             end
-          #else
-            #unsaved.append(hash_value)
           end
         end
         render json: { status: 'SUCCESS', message: 'Loaded metadata',
