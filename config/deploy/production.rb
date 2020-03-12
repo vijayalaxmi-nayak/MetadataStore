@@ -1,3 +1,5 @@
+server '3.135.201.144', user: 'ubuntu', roles: %w{web app db}
+set :ssh_options, { forward_agent: true }
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
