@@ -1,8 +1,8 @@
-server '3.135.201.144', user: 'ubuntu', roles: %w{app db web}, primary: true
+#server '3.135.201.144', user: 'ubuntu', roles: %w{app db web}, primary: true
 
-set :branch, ENV['BRANCH'] if ENV['BRANCH']
-set :domain, 'metadata_store_application'
-set :deploy_to, '/var/www/metadata_store_application'
+#set :branch, ENV['BRANCH'] if ENV['BRANCH']
+#set :domain, 'metadata_store_application'
+#set :deploy_to, '/var/www/metadata_store_application'
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
