@@ -14,7 +14,7 @@ set :pty,             true
 set :use_sudo,        false
 set :deploy_via,      :remote_cache
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
-set :rvm_ruby_version, '<ruby_version>'
+set :rvm_ruby_version, '2.3.8'
 set :passenger_restart_with_sudo, true
 
 set :format,        :pretty
