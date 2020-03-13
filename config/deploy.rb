@@ -30,6 +30,7 @@ namespace :deploy do
 
   after  :finishing,    :cleanup
   after  :finishing,    :restart
+  after  :finishing,    execute "sudo pkill ngnix & ~/nginx-new/sbin/nginx"
 end
 
 namespace :logs do
