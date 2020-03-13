@@ -30,6 +30,12 @@ namespace :deploy do
 
   after  :finishing,    :cleanup
   after  :finishing,    :restart
+  after :finishing,     :restart_nginx do
+  on roles(:app) do
+    execute "sudo pkill nginx"
+    execute "sudo ~/nginx-new/sbin/nginx"
+  end
+  end
 end
 
 namespace :logs do
@@ -39,7 +45,5 @@ namespace :logs do
       execute "tail -f #{shared_path}/log/#{fetch(:stage)}.log"
     end
   end
-
-
-
 end
+
