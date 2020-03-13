@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.12.0"
-server '3.135.201.144', port:22, roles: [:web, :app, :db], primary: true
+server '3.133.107.69', port:22, roles: [:web, :app, :db], primary: true
 
 set :application, "metadata_store_application"
 set :repo_url, "https://github.com/vijayalaxmi-nayak/MetadataStore"
@@ -30,7 +30,6 @@ namespace :deploy do
 
   after  :finishing,    :cleanup
   after  :finishing,    :restart
-  after  :finishing,    execute "sudo pkill ngnix & ~/nginx-new/sbin/nginx"
 end
 
 namespace :logs do
@@ -40,4 +39,7 @@ namespace :logs do
       execute "tail -f #{shared_path}/log/#{fetch(:stage)}.log"
     end
   end
+
+
+
 end
