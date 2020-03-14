@@ -8,7 +8,8 @@ module Api
       require 'aws-sdk'
 
       # displays the medias based on filters
-      api :GET, '/medias/', 'Displays medias based on filters'
+      api :GET, '/sessions/:session_id/medias/', 'Displays medias based on filters'
+      param :session_id, String, desc: 'Session Id'
       param :asset_id, String, desc: 'Asset Id'
       param :title, String, desc: 'Title of the media'
       param :duration, :number, desc: 'Duration of the media in milliseconds'
@@ -16,7 +17,7 @@ module Api
       param :to, :number, desc: 'End duration of media in milliseconds'
       example %(
       Search by asset_id
-      GET api/v1/medias?asset_id=AB100
+      GET api/v1/sessions/pvVSdt9Q2f9up4fa5AQV/medias?asset_id=AB100
       {
       "status": "SUCCESS",
       "message": "Loaded medias",
@@ -37,7 +38,7 @@ module Api
       }
 
       Search by title
-      GET api/v1/medias/?title=song4
+      GET api/v1/sessions/pvVSdt9Q2f9up4fa5AQV/medias/?title=song4
       {
       "status": "SUCCESS",
       "message": "Loaded medias",
@@ -58,7 +59,7 @@ module Api
       }
 
       Search by duration
-      GET api/v1/medias?duration=12090
+      GET api/v1/sessions/pvVSdt9Q2f9up4fa5AQV/medias?duration=12090
       {
       "status": "SUCCESS",
       "message": "Loaded medias",
@@ -91,7 +92,7 @@ module Api
       }
 
       Search by asset_id, title, from and to of duration, and offset
-      GET api/v1/medias?title=SONG&asset_id=a&from=45&to=100&offset=2
+      GET api/v1/sessions/pvVSdt9Q2f9up4fa5AQV/medias?title=SONG&asset_id=a&from=45&to=100&offset=2
       {
       "status": "SUCCESS",
       "message": "Loaded medias",
@@ -124,36 +125,40 @@ module Api
       }
       )
       def index
-        medias = Media.where(nil)
-        # search by asset_id
-        medias = medias.search_by_asset_id(params[:asset_id]) if
-params[:asset_id].present?
-        # search by title
-        medias = medias.search_by_title(params[:title]) if
-params[:title].present?
-        # search by duration
-        medias = medias.search_by_duration(params[:duration]) if
-params[:duration].present?
-        # search by duration - from and to
-        medias = medias.search_by_duration_from_and_to(params[:from], params[:to]) if params[:from].present? and params[:to].present?
-        # sort by created_at
-        medias = medias.order('created_at')
-        # applying limit and offset
-        # limit = 10
-        # default offset is 0
-        offset = params[:offset] if params[:offset].present?
-        medias = medias.offset(offset).limit(10)
-        if medias == []
-          render json: { status: 'NOT FOUND', message: 
-'Desired media file does not exists' }, status: :ok
-        else
-          render json: { status: 'SUCCESS', message: 'Loaded medias', data:
-medias }, status: :ok
+        current_user = User.find_by_authentication_token(params[:session_id])
+        if current_user != nil
+          medias = Media.where(nil)
+          # search by asset_id
+          medias = medias.search_by_asset_id(params[:asset_id]) if
+  params[:asset_id].present?
+          # search by title
+          medias = medias.search_by_title(params[:title]) if
+  params[:title].present?
+          # search by duration
+          medias = medias.search_by_duration(params[:duration]) if
+  params[:duration].present?
+          # search by duration - from and to
+          medias = medias.search_by_duration_from_and_to(params[:from], params[:to]) if params[:from].present? and params[:to].present?
+          # sort by created_at
+          medias = medias.order('created_at')
+          # applying limit and offset
+          # limit = 10
+          # default offset is 0
+          offset = params[:offset] if params[:offset].present?
+          medias = medias.offset(offset).limit(10)
+          if medias == []
+            render json: { status: 'NOT FOUND', message: 
+  'Desired media file does not exists' }, status: :ok
+          else
+            render json: { status: 'SUCCESS', message: 'Loaded medias', data:
+  medias }, status: :ok
+          end
         end
       end
 
       # creates a new media
-      api :POST, '/medias/', 'Creates a new media'
+      api :POST, '/sessions/:session_id/medias/', 'Creates a new media'
+      param :session_id, String, desc: 'Session Id'
       param :asset_id, String, desc: 'Asset Id', required: true
       param :media_type, String, desc: 'Media Type(Audio or Video)', required:
 true
@@ -163,7 +168,7 @@ true
       param :location, String, desc: 'File location where the media is stored'
       param :recorded_time, String, desc: 'Recorded time of the media'
       example %(
-      POST api/v1/medias
+      POST api/v1/sessions/pvVSdt9Q2f9up4fa5AQV/medias
       {
       "asset_id":"AH100",
       "media_type":"audio",
@@ -189,26 +194,30 @@ true
       }
       )
       def create
-        media = Media.new(params_media)
-        if media.save
-          if media.media_type == 'audio'
-            render json: { status: 'SUCCESS', message: 'saved audio', data:
-media }, status: :ok
+        current_user = User.find_by_authentication_token(params[:session_id])
+        if current_user != nil
+          media = Media.new(params_media)
+          if media.save
+            if media.media_type == 'audio'
+              render json: { status: 'SUCCESS', message: 'saved audio', data:
+  media }, status: :ok
+            else
+              render json: { status: 'SUCCESS', message: 'saved video', data:
+  media }, status: :ok
+            end
           else
-            render json: { status: 'SUCCESS', message: 'saved video', data:
-media }, status: :ok
+            render json: { status: 'ERROR', message: 'failed to save media', data:
+  media.errors }, status: :unprocessable_entity
           end
-        else
-          render json: { status: 'ERROR', message: 'failed to save media', data:
-media.errors }, status: :unprocessable_entity
         end
       end
 
       # shows a specfic media based on asset_id
-      api :GET, '/medias/:id', 'Displays a specific media based on asset_id'
+      api :GET, '/sessions/:session_id/medias/:id', 'Displays a specific media based on asset_id'
+      param :session_id, String, desc: 'Session Id'
       param :id, String, desc: 'Asset Id'
       example %(
-      GET api/v1/medias/AA100
+      GET api/v1/sessions/pvVSdt9Q2f9up4fa5AQV/medias/AA100
       {
       "status": "SUCCESS",
       "message": "Loaded Media",
@@ -227,21 +236,25 @@ media.errors }, status: :unprocessable_entity
       }
       )
       def show
-        media = Media.find_by_asset_id(params[:id])
-        if media.nil?
-          render json: { status: 'NOT FOUND', message: 
-'Desired asset_id of Media does not exists' }, status: :ok
-        else
-          render json: { status: 'SUCCESS', message: 'Loaded Media', data:
-media }, status: :ok
+        current_user = User.find_by_authentication_token(params[:session_id])
+        if current_user != nil
+          media = Media.find_by_asset_id(params[:id])
+          if media.nil?
+            render json: { status: 'NOT FOUND', message: 
+  'Desired asset_id of Media does not exists' }, status: :ok
+          else
+            render json: { status: 'SUCCESS', message: 'Loaded Media', data:
+  media }, status: :ok
+          end
         end
       end
 
       # deletes a specific media based on asset_id
-      api :DELETE, '/medias/:id', 'Deletes a specific media based on asset_id'
+      api :DELETE, '/sessions/:session_id/medias/:id', 'Deletes a specific media based on asset_id'
+      param :session_id, String, desc: 'Session Id'
       param :asset_id, String, desc: 'Asset Id'
       example %(
-      DELETE api/v1/medias/AH100
+      DELETE api/v1/sessions/pvVSdt9Q2f9up4fa5AQV/medias/AH100
       {
       "status": "SUCCESS",
       "message": "Deleted media",
@@ -260,24 +273,28 @@ media }, status: :ok
       }
       )
       def destroy
-        del_media = Media.find_by_asset_id(params[:id])
-        del_media.destroy
-        render json: { status: 'SUCCESS', message: 'Deleted media', data:
-del_media }, status: :ok
+        current_user = User.find_by_authentication_token(params[:session_id])
+        if current_user != nil
+          del_media = Media.find_by_asset_id(params[:id])
+          del_media.destroy
+          render json: { status: 'SUCCESS', message: 'Deleted media', data:
+  del_media }, status: :ok
+        end
       end
 
       # uploads the metadata submitted by user via .csv file
-      api :PUT, '/medias/', 'Updates the metadata of media'
+      api :PUT, '/sessions/:session_id/medias/', 'Updates the metadata of media'
+      param :session_id, String, desc: 'Session Id'
       param :asset_id, String, desc: 'Asset Id'
       param :title, String, desc: 'Title of the media'
       param :duration, :number, desc: 'Duration of the media in milliseconds'
       param :location, String, desc: 'File location where the media is stored'
       param :recorded_time, String, desc: 'Recorded time of the media'
       example %(
-      PUT api/v1/medias/
+      PUT api/v1/sessions/pvVSdt9Q2f9up4fa5AQV/medias/
       Input:
       {
-      "id":"/home/amagi/Desktop/meta.csv"
+      "id":"meta.csv"
       }
 
       Server response:
@@ -301,54 +318,48 @@ del_media }, status: :ok
         "recorded_time": "01/02/20 01:11:08",
         "timecode": "00:00:00.60"
       }
-      ],
-      "unsaved_data": [
-      {
-        "asset_id": "D100",
-        "title": "song1",
-        "duration": "12003",
-        "location": "https://www.youtube.com/watch?v=QojnRc7SS9o",
-        "recorded_time": "01/02/20 03:10:40"
-      }
       ]
       }
       )
       def update
-        saved = []
-        access_key_id =  ENV['AWS_ACCESS_KEY_ID']
-        secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
-        bucket_name = "prajnarails"
-        s3 = Aws::S3::Client.new(region: 'us-east-2', access_key_id: access_key_id, secret_access_key: secret_access_key)
-        resp = s3.get_object({
-        bucket: bucket_name,
-        key: params[:id]
-        })
-        result = resp.body.read
-        csv = CSV.parse(result, :headers => true)
-        csv.each do |row|
-          asset_id = row[0]
-          title = row[1]
-          duration = row[2]
-          location = row[3]
-          recorded_time = row[4]
-          if Media.exists? asset_id: asset_id
-            type = Media.where(asset_id: asset_id).pluck(:media_type)[0]
-            if type == 'audio'
-              timecode =
-Audio.duration_tc(duration.to_i)
-            elsif type == 'video'
-              timecode =
-Video.duration_tc(duration.to_i)
-            end
-            metadata = Media.find_by_asset_id(asset_id)
-            hash_value =  { asset_id: asset_id, title: title, duration: duration, location: location, recorded_time: recorded_time, timecode: timecode }
-            if metadata.update_attributes(hash_value)
-              saved.append(hash_value)
+        current_user = User.find_by_authentication_token(params[:session_id])
+        if current_user != nil
+          saved = []
+          access_key_id =  ENV['AWS_ACCESS_KEY_ID']
+          secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
+          bucket_name = "prajnarails"
+          s3 = Aws::S3::Client.new(region: 'us-east-2', access_key_id: access_key_id, secret_access_key: secret_access_key)
+          resp = s3.get_object({
+          bucket: bucket_name,
+          key: params[:id]
+          })
+          result = resp.body.read
+          csv = CSV.parse(result, :headers => true)
+          csv.each do |row|
+            asset_id = row[0]
+            title = row[1]
+            duration = row[2]
+            location = row[3]
+            recorded_time = row[4]
+            if Media.exists? asset_id: asset_id
+              type = Media.where(asset_id: asset_id).pluck(:media_type)[0]
+              if type == 'audio'
+                timecode =
+  Audio.duration_tc(duration.to_i)
+              elsif type == 'video'
+                timecode =
+  Video.duration_tc(duration.to_i)
+              end
+              metadata = Media.find_by_asset_id(asset_id)
+              hash_value =  { asset_id: asset_id, title: title, duration: duration, location: location, recorded_time: recorded_time, timecode: timecode }
+              if metadata.update_attributes(hash_value)
+                saved.append(hash_value)
+              end
             end
           end
+          render json: { status: 'SUCCESS', message: 'Loaded metadata',
+  saved_data: saved }, status: :ok
         end
-        render json: { status: 'SUCCESS', message: 'Loaded metadata',
-saved_data: saved }, status: :ok
       end
 
       private

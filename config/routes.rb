@@ -1,17 +1,19 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
+  devise_for :users
   apipie
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  namespace 'api' do
+  namespace 'api', defaults: { format: :json  } do
     namespace 'v1' do
-      resources :accounts
-      resources :medias
-      resources :audios
-      resources :videos
+       resources :sessions, only: [:create, :destroy] do
+        resources :accounts
+        resources :medias
+      end
+      resources :users
 
-      get '/show_media/:id', to: 'accounts#show_media'
-      get '/show_media_by_code/:id', to: 'accounts#show_media_by_code'
-      put '/medias/', to: 'medias#update'
+      get '/sessions/:session_id/show_media/:id', to: 'accounts#show_media'
+      get '/sessions/:session_id/show_media_by_code/:id', to: 'accounts#show_media_by_code'
+      put '/sessions/:session_id/medias/', to: 'medias#update'
     end
   end
 end
