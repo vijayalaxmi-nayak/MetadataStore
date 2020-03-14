@@ -2,9 +2,6 @@ module Api
   module V1
     class UsersController < ApplicationController
       api :POST, '/users', 'Creates a new user'
-      param :email, String, desc: 'Email', required: true
-      param :password, String, desc: 'Password', required: true
-      param :password_confirmation, String, desc: 'Confirm password', required: true
       example %(
       POST /api/v1/users
       Input:
@@ -43,7 +40,7 @@ user.errors }, status: :unprocessable_entity
       private
 
       def user_params
-        params.require(:user).permit(:email, :password, :password_confirmation)
+        params.permit(:email, :password, :password_confirmation)
       end
     end
   end
