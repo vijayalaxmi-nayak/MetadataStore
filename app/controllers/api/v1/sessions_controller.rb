@@ -3,8 +3,8 @@ module Api
     class SessionsController < ApplicationController
       #signin
       api :POST, '/sessions', 'Signin by the user'
-      param :email, String, desc: 'Email Id', required: true
-      param :password, String, desc: 'Password', required: true
+      param :email, String, desc: 'Email Id'
+      param :password, String, desc: 'Password'
       example %(
       POST /api/v1/sessions
       Input:

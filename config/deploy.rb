@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.12.0"
-server '3.133.107.69', port:22, roles: [:web, :app, :db], primary: true
+server '18.224.69.99', port:22, roles: [:web, :app, :db], primary: true
 
 set :application, "metadata_store_application"
 set :repo_url, "https://github.com/vijayalaxmi-nayak/MetadataStore"
